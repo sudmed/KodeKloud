@@ -4,3 +4,4 @@ sudo vi /etc/ssh/sshd_config
 # Remove the "#" and change "yes" to "no" at line
 
 PermitRootLogin no
+sudo systemctl restart sshd
