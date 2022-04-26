@@ -8,6 +8,7 @@ Update the message of the day on all application and db servers for Nautilus.
 Make use of the approved template located at /tmp/nautilus_banner on jump host
 '
 
+
 # On Jump Server
 # Copy the /tmp/nautilus_banner using scp command from jumpserver to all Apps & DB servers
 ll /tmp/nautilus_banner
