@@ -40,3 +40,5 @@ sestatus
 -SELINUX=enforcing
 +SELINUX=disabled
 ```
+# or
+sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
