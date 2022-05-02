@@ -9,4 +9,6 @@ Please give executable permissions to /tmp/xfusioncorp.sh script on App Server 3
 chmod o+rx /tmp/xfusioncorp.sh
 
 # Execution of a file need read permission. Only root can exec file without read permission, but you was asked 'make sure EVERY user can'.
-# chmod ugo+rx <file>
+```bash
+chmod ugo+rx <file>
+```
