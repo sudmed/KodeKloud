@@ -20,3 +20,9 @@ sudo systemctl restart sshd
 #PermitRootLogin no
 ```
 So the entered value remained commented out.
+
+
+# You just forgot
+```bash
+systemctl restart sshd
+```
