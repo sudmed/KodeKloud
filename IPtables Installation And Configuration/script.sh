@@ -11,7 +11,17 @@ Make sure the rules remain, even after system reboot.
 
 sudo -i
 yum install iptables-services -y
-iptables -I INPUT -p TCP --dport 8081 -j DROP
-iptables -I INPUT -p TCP --source stlb01 --dport 8081 -j ACCEPT
+systemctl start iptables
+systemctl enable iptables
+
+# iptables -A INPUT -p tcp --destination-port 8081 -s 172.16.238.14 -j ACCEPT
+# iptables -A INPUT -p tcp --destination-port 8081 -j DROP
+# iptables -L --line-numbers
+# iptables -R INPUT 5 -p icmp -j REJECT
+# service iptables save
+# systemctl restart iptables && systemctl status iptables
+
+iptables -A INPUT -p TCP --dport 8081 -j DROP
+iptables -A INPUT -p TCP --source stlb01 --dport 8081 -j ACCEPT
 service iptables save
 systemctl enable --now iptables
