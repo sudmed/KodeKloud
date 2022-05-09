@@ -1,0 +1,13 @@
+- name: Task create archive and copy to host
+  hosts: stapp01, stapp02, stapp03
+  become: yes
+  tasks:
+    - name: As per the task create the archive file and set the owner
+      archive:
+        path: /usr/src/sysops/
+        dest: /opt/sysops/beta.tar.gz
+        format: gz
+        force_archive: true
+        owner: "{{ ansible_user }}"
+        group: "{{ ansible_user }}"
+        
