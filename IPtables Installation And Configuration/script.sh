@@ -1,5 +1,4 @@
 # IPtables Installation And Configuration
-
 : '
 We have one of our websites up and running on our Nautilus infrastructure in Stratos DC. 
 Our security team has raised a concern that right now Apache’s port i.e 8081 is open for all since there is no firewall installed on these hosts. 
