@@ -25,3 +25,8 @@ iptables -A INPUT -p TCP --dport 8081 -j DROP
 iptables -A INPUT -p TCP --source stlb01 --dport 8081 -j ACCEPT
 service iptables save
 systemctl enable --now iptables
+
+
+# Do drop, then accept.
+iptables -A INPUT -p TCP --dport 8081 -j DROP
+iptables -A INPUT -p TCP --source stlb01 --dport 8081 -j ACCEPT
