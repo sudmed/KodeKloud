@@ -77,3 +77,7 @@ mv index.html /usr/share/nginx/html
 # Validate the task  from JUMP server
 # yum install curl -y
 curl -Ik https://172.16.238.10
+
+
+
+# You've modified the file nginx.conf, but didn't delete hash signs # in the section 'Settings for a TLS enabled server'. All those directives are still behind #.
