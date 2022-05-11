@@ -81,3 +81,10 @@ curl -Ik https://172.16.238.10
 
 
 # You've modified the file nginx.conf, but didn't delete hash signs # in the section 'Settings for a TLS enabled server'. All those directives are still behind #.
+
+Remove the '#' at the beginning of this section after you made those changes:
+# Settings for a TLS enabled server.                                                                                                                          
+#
+#    server {
+The '#' char is commenting out the parameter; so removing them to make the parameters active. 
+Then restart nginx service.
