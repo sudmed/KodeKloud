@@ -1,16 +1,20 @@
 # Linux LogRotate
 
 # Install the package as per the given task
-yum install squid -y
+yum install -y squid
+# or yum install -y haproxy
 
 # Navigate to logrotate folder and check existing folder
 /etc/logrotate.d/
 cat /etc/logrotate.d/squid
+# or cat /etc/logrotate.d/haproxy
 
 # As per the task edit log file & save the file
 vi /etc/logrotate.d/squid
+# or sudo vi /etc/logrotate.d/haproxy
 
 /var/log/squid/*.log {
+# or /var/log/haproxy.log {
     monthly
     rotate 3
     compress
@@ -29,5 +33,5 @@ vi /etc/logrotate.d/squid
 
 
 # Start services & check the status
-systemctl start squid
-systemctl status squid
+systemctl start squid && systemctl status squid
+# or systemctl start haproxy && systemctl status haproxy
