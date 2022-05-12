@@ -60,3 +60,16 @@ considering log /var/log/haproxy.log
   log does not need rotating (log has been rotated at 2021-7-31 17:0, that is not month ago yet)
 not running postrotate script, since no logs were rotated
 set default create context
+
+
+
+---
+Check if  the haproxy.log exists
+```bash
+ls -l /var/log/haproxy.log
+```
+```bash
+###  by default  there's  no haproxy.log  in /var/log
+# to have these messages end up in /var/log/haproxy.log you will
+# need to configure  /etc/sysconfig/rsyslog  and   /etc/rsyslog.conf
+```
