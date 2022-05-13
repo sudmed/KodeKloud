@@ -11,7 +11,7 @@ d. SFTP user should only be allowed to make SFTP connections.
 
 
 sudo -i
-useradd mark                                                                                                             
+useradd -d /var/www/appdata -s /bin/nologin mark
 passwd mark
 # Password: BruCStnMT5
 
