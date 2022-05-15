@@ -42,3 +42,14 @@ sestatus
 ```
 # or
 setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
+
+
+
+Install the SElinux package first:
+```console
+yum install -y selinux*
+```
+And after you can disable it:
+```console
+setenforce 0 && sed -i 's/^SELINUX=.*/SELINUX=disabled/g' /etc/selinux/config
+```
