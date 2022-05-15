@@ -28,3 +28,9 @@ Matches the end of a word.
 $ echo "abc %-= def." | sed 's/\>/X/g'
 abcX %-= defX.
 '
+
+
+
+```bash
+sed -e '/software/d' BSD.txt > /home/BSD_DELETE.txt
+```
