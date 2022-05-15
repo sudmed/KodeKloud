@@ -26,3 +26,10 @@ So the entered value remained commented out.
 ```bash
 systemctl restart sshd
 ```
+
+
+
+```
+#PermitRootLogin no 
+```
+This line doesn't work because it is commented out. Remove hash (#).
