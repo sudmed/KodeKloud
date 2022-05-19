@@ -40,3 +40,8 @@ vi /etc/logrotate.d/squid
 # Start services & check the status
 systemctl start squid
 systemctl status squid
+
+
+# Validate logs
+bash /etc/cron.daily/logrotate
+cat /var/lib/logrotate/logrotate.status
