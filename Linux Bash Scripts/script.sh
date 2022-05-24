@@ -22,6 +22,7 @@ vi /scripts/ecommerce_backup.sh
 +scp /backup/xfusioncorp_ecommerce.zip clint@stbkp01:/backup/
 
 # Create a keygen and copy the key to the backup server so that the bash script will not require any password
+# You should generate the key as tony, not as the root user.
 ssh-keygen
 
 # Copy the key on the backup server & cross-check login without password prompt
@@ -42,3 +43,7 @@ ll /backup
 ssh clint@stbkp01
 	total 4
 	-rw-rw-r-- 1 clint clint 623 May  8 18:33 xfusioncorp_ecommerce.zip
+
+
+
+# You should generate the key as tony, not as the root user.
