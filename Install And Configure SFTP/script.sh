@@ -23,16 +23,16 @@ chmod -R 755 /var/www
 ll -lsd /var/www/
 
 vi /etc/ssh/sshd_config
--subsystem sftp /usr/libexec/openssh/sftp-server
-+Subsystem sftp internal-sftp
-+Match User mark
-+ForceCommand internal-sftp
-+PasswordAuthentication yes
-+ChrootDirectory /var/www/appdata
-+PermitTunnel no
-+AllowTcpForwarding no
-+X11Forwarding no
-+AllowAgentForwarding no
+---subsystem sftp /usr/libexec/openssh/sftp-server
++++Subsystem sftp internal-sftp
++++Match User mark
++++ForceCommand internal-sftp
++++PasswordAuthentication yes
++++ChrootDirectory /var/www/appdata
++++PermitTunnel no
++++AllowTcpForwarding no
++++X11Forwarding no
++++AllowAgentForwarding no
 
 systemctl restart sshd
 systemctl status sshd
