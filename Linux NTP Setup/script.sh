@@ -16,3 +16,7 @@ ntpstat
 systemctl status ntpd
 systemctl enable ntpd
 systemctl start ntpd
+
+
+
+# The task is to install `NTP` package, not `CRONY`.
