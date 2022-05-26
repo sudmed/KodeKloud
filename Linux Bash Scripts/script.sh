@@ -46,4 +46,16 @@ ssh clint@stbkp01
 
 
 
+
+
 # You should generate the key as tony, not as the root user.
+
+
+
+```bash
+ssh-keygen                                                                                  
+Generating public/private rsa key pair.                                                                       
+Enter file in which to save the key (/root/.ssh/id_rsa):                                                      
+Created directory '/root/.ssh'.
+```
+You should generate the key as `banner` user, not as the `root`.
