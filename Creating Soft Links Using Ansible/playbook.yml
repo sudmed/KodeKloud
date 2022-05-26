@@ -1,0 +1,51 @@
+---
+- hosts: stapp01
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Create file
+    file:
+        path: /opt/devops/blog.txt
+        state: touch
+        owner: tony
+        group: tony
+
+  - name: Create simlink
+    file:
+        src: /opt/devops
+        dest: /var/www/html
+        state: link
+
+- hosts: stapp02
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Create file
+    file:
+        path: /opt/devops/story.txt
+        state: touch
+        owner: steve
+        group: steve
+
+  - name: Create simlink
+    file:
+        src: /opt/devops
+        dest: /var/www/html
+        state: link
+
+- hosts: stapp03
+  gather_facts: false
+  become: true
+  tasks:
+  - name: Create file
+    file:
+        path: /opt/devops/media.txt
+        state: touch
+        owner: banner
+        group: banner
+
+  - name: Create simlink
+    file:
+        src: /opt/devops
+        dest: /var/www/html
+        state: link
