@@ -28,3 +28,13 @@ curl -Ik 172.16.238.12:3001
 
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:628961abd7baf4c4b496bffe
+
+
+
+# Change the order and the method of adding rules based on when you started iptables service.
+```bash
+systemctl start iptables && systemctl enable iptables
+iptables -I INPUT -p tcp --dport 5000 -j DROP
+iptables -I INPUT -p tcp --dport 5000 -s 172.16.238.14 -j ACCEPT
+```
+Then save and do for other servers. Good luck on retry. Be mindful adding the correct port.
