@@ -32,10 +32,10 @@ abcX %-= defX.
 
 
 ```bash
-sed -e '/software/d' BSD.txt > /home/BSD_DELETE.txt
+sed -e '/software/d' /home/BSD.txt > /home/BSD_DELETE.txt
 ```
 
 
 ```bash
-sed -e 's/\<the\>/them/g' BSD.txt > BSD_REPLACE.txt
+sed -e 's/\<the\>/them/g' /home/BSD.txt > /home/BSD_REPLACE.txt
 ```
