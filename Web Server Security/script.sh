@@ -23,3 +23,16 @@ systemctl status httpd
 # Validate Apache httpd running
 curl -I http://stapp01:8080
 curl -I http://stapp01:8080/media/
+
+
+
+
+: '
+```bash
+/etc/httpd/conf/httpd.conf
++++ServerTokens Prod
++++ServerSignature Off
++++Options FollowSymLinks
+---Options Indexes FollowSymLinks
+```
+'
