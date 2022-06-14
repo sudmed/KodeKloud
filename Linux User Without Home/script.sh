@@ -9,3 +9,11 @@ Create a user named javed in App Server 2 without a home directory.
 #useradd -M username
 useradd -M javed
 cat /etc/passwd
+
+
+
+
+Parameters are case-sensitive.  
+```bash
+useradd -M ammar
+```
