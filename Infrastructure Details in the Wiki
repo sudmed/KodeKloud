@@ -1,11 +1,7 @@
 # You need to correct Timezone on remote Application Servers.  
 See infrastructure details in the [wiki](https://kodekloudhub.github.io/kodekloud-engineer/docs/projects/nautilus)
-
-
 # Click the checkmark to try again.
-
-
 # Nothing to see / broken video. Try again.
-
-
 # S'il vous plaît.
+
+# Do your commands on 3 App servers, not on jumphost. See infrastructure details and credentials in the [wiki](https://kodekloudhub.github.io/kodekloud-engineer/docs/projects/nautilus).
