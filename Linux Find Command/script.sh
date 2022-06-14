@@ -18,3 +18,10 @@ find /var/www/html/official -type f -name '*.php' -exec cp --parents {} /officia
 ll /official
 find /official -type f -name '*.php' | wc -l
   #903
+
+
+
+
+```console
+find /var/www/html/news -type f -name '*.php' -exec cp --parents {} /news \;
+```
