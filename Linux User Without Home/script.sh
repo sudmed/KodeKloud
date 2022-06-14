@@ -11,9 +11,7 @@ useradd -M javed
 cat /etc/passwd
 
 
-
-
-Parameters are case-sensitive.  
+# Parameters are case-sensitive.  
 ```bash
 useradd -M ammar
 ```
