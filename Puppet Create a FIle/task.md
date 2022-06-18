@@ -13,7 +13,7 @@ also please make sure to run puppet agent test to apply/test the changes manuall
 :- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.
 
 
-### 1. Go to the directory from our task
+### 1. Go to the directory from the task
 `cd /etc/puppetlabs/code/environments/production/manifests/`
 
 
