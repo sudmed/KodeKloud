@@ -13,11 +13,11 @@ also please make sure to run puppet agent test to apply/test the changes manuall
 :- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.
 
 
-### Go to the directory from our task
+### 1. Go to the directory from our task
 `cd /etc/puppetlabs/code/environments/production/manifests/`
 
 
-### Create the puppet file
+### 2. Create the puppet file
 `vi news.pp`
 ```bash
 class file_creator {
@@ -31,16 +31,16 @@ class file_creator {
 ```
 
 
-### Validate the puppet file
+### 3. Validate the puppet file
 `puppet parser validate news.pp`
 
 
-### Logon to stapp01 server and become root
+### 4. Logon to stapp01 server and become root
 `ssh tony@stapp01`  
 `sudo -i`
 
 
-### Run the puppet agent
+### 5. Run the puppet agent
 `puppet agent -tv`
 ```console
 Info: Using configured environment 'production'
@@ -54,7 +54,7 @@ Notice: Applied catalog in 0.02 seconds
 ```
 
 
-### Validate the task
+### 6. Validate the task
 `ll /opt/finance/`
 ```console
 -rw-r--r-- 1 root root 0 Jun 18 08:29 news.txt
