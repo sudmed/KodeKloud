@@ -1,0 +1,25 @@
+---
+- hosts: stapp01, stapp02, stapp03
+  gather_facts: true
+  become: yes
+  tasks:
+  - name: create file using blockinfile
+    blockinfile:
+      create: yes
+      path: /root/facts.txt
+      block: |
+        Ansible managed node IP is {{ ansible_default_ipv4.address }}
+  
+  - name: Install apache package
+    yum:
+      name: httpd
+      state: present
+
+  - name: file copy
+    shell: cp /root/facts.txt /var/www/html/index.html
+
+  - name: check if httpd is running
+    service: 
+      name: httpd
+      state: started
+      
