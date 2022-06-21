@@ -12,7 +12,7 @@ Make sure to start httpd service after that.
 Note: Do not create a separate role for this task, just add all of the changes in index.yml playbook.
 
 
-## Go to the folder and create inventory & playbook files
+## 1. Go to the folder and create inventory & playbook files
 `cd /home/thor/playbooks/`  
 
 `ll`
@@ -52,7 +52,7 @@ total 8
 ```
 
 
-## execute the playbook
+## 2. Execute the playbook
 `ansible-playbook -i inventory index.yml`
 
 ```console
@@ -90,7 +90,7 @@ stapp03                    : ok=5    changed=2    unreachable=0    failed=0    s
 ```
 
 
-## validate the task by curl to all app server and check
+## 3. Validate the task by curl to all app server and check
 
 `curl http://stapp01`
 ```console
