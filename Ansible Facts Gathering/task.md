@@ -12,7 +12,7 @@ Make sure to start httpd service after that.
 Note: Do not create a separate role for this task, just add all of the changes in index.yml playbook.
 
 
-## 1. Go to the folder and create inventory & playbook files
+## 1. Go to the folder and create playbook file
 `cd /home/thor/playbooks/`  
 
 `ll`
