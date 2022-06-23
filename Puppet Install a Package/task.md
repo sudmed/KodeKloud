@@ -35,8 +35,8 @@ node 'stapp03.stratos.xfusioncorp.com' {
 
 
 ## 3. Login on App server stapp03
-ssh banner@stapp03
-sudo -i
+`ssh banner@stapp03`  
+`sudo -i`
 
 
 ## 4. Run Puppet agent
