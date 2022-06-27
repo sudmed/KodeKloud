@@ -4,7 +4,7 @@ As per details shared with DevOps team, we need to accomplish the following task
 a. Pull busybox:musl image on App Server 3 in Stratos DC and re-tag (create new tag) this image as busybox:media.
 
 
-## 1. login on to app server &  Switch to root
+## 1. login on to app server
 `ssh banner@stapp03`  
 `sudo -i`
 
@@ -36,7 +36,7 @@ busybox      musl      368ac696baa1   2 weeks ago   1.4MB
 ```
 
 
-```console
+```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62b6f999c8f39ab094d26385
 ```
