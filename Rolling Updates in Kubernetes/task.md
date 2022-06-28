@@ -66,7 +66,7 @@ deployment.apps/nginx-deployment image updated
 ```
 
 
-## 3. wait for  deployment and pods running status
+## 3. wait for  deployment and pods run
 `kubectl get pods`
 ```console
 NAME                                READY   STATUS              RESTARTS   AGE
