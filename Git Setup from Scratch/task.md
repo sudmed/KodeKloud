@@ -46,7 +46,7 @@ f. Also create master branch from your branch and remember you should not be abl
 `git push origin xfusioncorp_official`
 
 
-## 9. Switch to master and push to origin
+## 9. Trying to push to master
 `git checkout -b master`  
 `git branch`  
 `git push origin master`  
