@@ -13,8 +13,10 @@ f. Also create master branch from your branch and remember you should not be abl
 `ssh natasha@172.16.238.15`    # Bl@kW
 `sudo -i`
 
+
 ## 2. Install Git
 `yum install -y git`
+
 
 ## 3. Setup user git config
 `git config --global --add user.name natasha`  
@@ -46,7 +48,7 @@ f. Also create master branch from your branch and remember you should not be abl
 `git push origin xfusioncorp_official`
 
 
-## 9. Trying to push to master
+## 9. You Shall Not Push to Master!
 `git checkout -b master`  
 `git branch`  
 `git push origin master`  
