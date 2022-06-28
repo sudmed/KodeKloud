@@ -16,7 +16,7 @@ f. Also create master branch from your branch and remember you should not be abl
 ## 2. Install Git
 `yum install -y git`
 
-## 3. Setup git config for the user.email and user.name
+## 3. Setup user git config
 `git config --global --add user.name natasha`  
 `git config --global --add user.email natasha@stratos.xfusioncorp.com`
 
@@ -30,7 +30,7 @@ f. Also create master branch from your branch and remember you should not be abl
 `cp /tmp/update /opt/official.git/hooks/`
 
 
-## 6. clone git repository
+## 6. Clone git repository
 `cd /usr/src/kodekloudrepos/`  
 `git clone /opt/official.git`  
 
@@ -46,7 +46,7 @@ f. Also create master branch from your branch and remember you should not be abl
 `git push origin xfusioncorp_official`
 
 
-## 9. switch to master and push to origin
+## 9. Switch to master and push to origin
 `git checkout -b master`  
 `git branch`  
 `git push origin master`  
