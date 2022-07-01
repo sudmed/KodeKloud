@@ -1,6 +1,6 @@
 ---
 - name: Ansible replace
-  hosts: stapp01,stapp02,stapp03
+  hosts: all
   become: yes
   tasks:
 
