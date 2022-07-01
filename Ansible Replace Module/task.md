@@ -8,7 +8,7 @@ We have a file /opt/itadmin/media.txt on app server 3. Using Ansible replace mod
 Note: Validation will try to run the playbook using command ansible-playbook -i inventory playbook.yml so please make sure the playbook works this way without passing any extra arguments.
 
 
-## 1. Let's see config & inventory files
+## 1. Config & inventory files
 `cd /home/thor/ansible`  
 `ll`  
 ```console
