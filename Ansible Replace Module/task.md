@@ -40,7 +40,7 @@ stapp03 ansible_host=172.16.238.12 ansible_ssh_pass=BigGr33n ansible_user=banner
 ```yaml
 ---
 - name: Ansible replace
-  hosts: stapp01,stapp02,stapp03
+  hosts: all
   become: yes
   tasks:
 
