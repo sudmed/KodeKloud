@@ -26,7 +26,7 @@ node 'stapp02.stratos.xfusioncorp.com' {
 `puppet parser validate blog.pp`  
 
 
-## 2. Login on all App server (stapp02)
+## 2. Login on stapp02
 `ssh steve@stapp02   #Am3ric@`  
 `sudo -i`  
 
