@@ -5,7 +5,8 @@ Puppet server and agent nodes are already have required packages, but you may ne
 Assign and sign certificates for both master and agent node.  
 
 
-## 1. On jump_host and stapp01 add word "puppet" at the end of the hostnames
+## 1. Add alias "puppet"
+### 1.1. on jump_host
 `sudo -i`  
 `vi /etc/hosts`
 ```bash
@@ -23,6 +24,7 @@ ff02::2 ip6-allrouters
 172.17.0.5      jump_host.stratos.xfusioncorp.com jump_host puppet
 ```
 
+### 1.2. on stapp02
 `ssh steve@172.16.238.11`  
 `sudo -i`  
 `vi /etc/hosts`
@@ -34,7 +36,7 @@ ff02::2 ip6-allrouters
 ```
 
 
-## 2. restart the services 
+## 2. Start/Restart puppet server
 ### 2.1. on master node:
 `systemctl restart puppetserver`  
 `systemctl start puppet`
@@ -65,8 +67,7 @@ Jul 04 07:28:21 jump_host.stratos.xfusioncorp.com puppet-agent[14599]: Starting 
 Jul 04 07:28:28 jump_host.stratos.xfusioncorp.com puppet-agent[14615]: Applied catalog in 0.01 seconds
 ```
 
-
-### and on stapp02:
+### 2.2. on stapp02
 `sudo systemctl start puppet`  
 
 `sudo systemctl status puppet`
@@ -91,7 +92,7 @@ Jul 04 07:29:08 stapp02.stratos.xfusioncorp.com systemd[1]: Trying to enqueue jo
 ```
 
 
-## 3. On stapp02:
+## 3. Start puppet agent stapp02:
 `puppet agent -t`  
 ```bash
 Info: Creating a new RSA SSL key for stapp02.stratos.xfusioncorp.com
@@ -104,7 +105,7 @@ Exiting now because the waitforcert setting is set to 0.
 ```
 
 
-## On master node:
+## 4. On master node check for certificate signing requests:
 `puppetserver ca list --all`  
 ```bash
 Requested Certificates:
@@ -120,7 +121,7 @@ Successfully signed certificate request for stapp02.stratos.xfusioncorp.com
 ```
 
 
-## 4. Validate on stapp02:
+## 5. Restart sevice on stapp02:
 `sudo systemctl restart puppet`  
 ```bash
 sudo systemctl status puppet
