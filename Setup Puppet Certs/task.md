@@ -36,7 +36,7 @@ ff02::2 ip6-allrouters
 ```
 
 
-## 2. Start/Restart puppet server
+## 2. Start/Restart puppet service
 ### 2.1. on master node:
 `systemctl restart puppetserver`  
 `systemctl start puppet`
