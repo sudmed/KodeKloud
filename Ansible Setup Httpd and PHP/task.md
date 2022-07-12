@@ -114,7 +114,7 @@ stapp03                    : ok=6    changed=5    unreachable=0    failed=0    s
 ```
 
 
-## 3. Validate the task
+## 3. Validate the task on stapp03
 `rpm -qa | grep httpd`
 ```console
 httpd-tools-2.4.6-97.el7.centos.5.x86_64
