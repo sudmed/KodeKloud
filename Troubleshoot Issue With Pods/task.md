@@ -99,7 +99,7 @@ Events:
 
 ## 3. Resolve images issue
 `kubectl edit pod webserver`
-#### there was a typo "httpd:latests"
+#### there is a typo in line `- image: httpd:latests`, fix to `- image: httpd:latest`
 ```console
 # Please edit the object below. Lines beginning with a '#' will be ignored,
 # and an empty file will abort the edit. If an error occurs while saving this file will be
