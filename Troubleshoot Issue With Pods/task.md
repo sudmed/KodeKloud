@@ -99,7 +99,7 @@ Events:
 
 ## 3. Resolve images issue
 `kubectl edit pod webserver`
-# fix "httpd:latests" to "httpd:latest" 
+### fix "httpd:latests" to "httpd:latest" 
 ```console
 # Please edit the object below. Lines beginning with a '#' will be ignored,
 # and an empty file will abort the edit. If an error occurs while saving this file will be
@@ -151,6 +151,12 @@ spec:
 
 
 ## 4. Get running status
+`kubectl get pods`
+```console
+NAME        READY   STATUS    RESTARTS   AGE
+webserver   2/2     Running   0          2m50s
+```
+
 `kubectl describe pod webserver`
 ```console
 Name:         webserver
