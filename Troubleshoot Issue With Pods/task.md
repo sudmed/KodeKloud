@@ -147,6 +147,7 @@ spec:
     - mountPath: /var/log/httpd
       name: shared-logs
     - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+<...>
 ```
 
 
