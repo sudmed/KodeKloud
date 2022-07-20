@@ -36,11 +36,10 @@ class mysql_database {
 }
 ```
 
-
-## 2. Validate the puppet file
 `puppet parser validate media.pp`
 
 
+## 2. Validate the task
 ## 2.1. Login on agent node (database server)
 `ssh peter@stdb01`  
 `sudo -i`
@@ -77,7 +76,7 @@ Jul 20 20:18:06 stdb01.stratos.xfusioncorp.com systemd[1]: Started MariaDB datab
 ```
 
 
-## 2.4. Login to mysql
+## 2.4. Login to maridb
 `mysql -u kodekloud_top -p kodekloud_db3 -h localhost`
 ```console
 Enter password: 
