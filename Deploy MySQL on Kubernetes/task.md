@@ -219,8 +219,8 @@ replicaset.apps/mysql-deployment-5f86875bc9   1         1         1       38s
 
 
 ## 6. Login to pod for validation
-`kubectl exec -it replicaset.apps/mysql-deployment-5f86875bc9 -- /bin/bash`
-`printenv`
+`kubectl exec -it replicaset.apps/mysql-deployment-5f86875bc9 -- /bin/bash`  
+`: printenv`
 ```console
 MYSQL_PASSWORD=B4zNgHA7Ya
 MYSQL_PORT_3306_TCP_PROTO=tcp
