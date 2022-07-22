@@ -14,7 +14,7 @@ d) name: MYSQL_PASSWORD, should pick value from secretKeyRef name: mysql-user-pa
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.  
 
 
-## 1. Check pods
+## 1. Check existing pods
 `kubectl get all`
 ```console
 NAME                 TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
@@ -22,7 +22,7 @@ service/kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   41m
 ```
 
 
-## 2.  Create a secret
+## 2.  Create secret
 `kubectl create secret generic mysql-root-pass --from-literal=password=YUIidhb667`
 ```console
 secret/mysql-root-pass created
@@ -39,7 +39,7 @@ secret/mysql-db-url created
 ```
 
  
-## 3. Validate the secret
+## 3. Check secret
 `kubectl get secret`
 ```console
 NAME                  TYPE                                  DATA   AGE
@@ -50,7 +50,7 @@ mysql-user-pass       Opaque                                2      10s
 ```
 
 
-## 4. Create a YAML
+## 4. Create a YAML file
 `vi /tmp/mysql.yaml`
 ```yaml
 apiVersion: v1
@@ -174,7 +174,7 @@ spec:
 ```
 
 
-## 5. Run yaml file
+## 5. Run YAML file
 `kubectl create -f /tmp/mysql.yaml`
 ```console
 persistentvolume/mysql-pv created
@@ -218,7 +218,7 @@ replicaset.apps/mysql-deployment-5f86875bc9   1         1         1       38s
 ```
 
 
-## 6. Validate login to pod
+## 6. Login to pod for validation
 `kubectl exec -it replicaset.apps/mysql-deployment-5f86875bc9 -- /bin/bash`
 `printenv`
 ```console
