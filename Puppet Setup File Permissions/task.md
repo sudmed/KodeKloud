@@ -31,8 +31,9 @@ class file_modifier {
 `puppet parser validate apps.pp`  
 
 
-## 3. Login on App server
+## 3. Login on App server 1
 `ssh tony@stapp01    # Ir0nM@n`  
+`sudo -i`  
 
 `puppet agent -tv`  
 ```bash
