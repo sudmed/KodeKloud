@@ -58,7 +58,7 @@ Notice: Applied catalog in 0.16 seconds
 ```
 
 
-## 4. alidate the task on App server
+## 4. Validate the task on App server 1
 `cat /opt/dba/ecommerce.txt`  
 ```console
 Welcome to xFusionCorp Industries!
