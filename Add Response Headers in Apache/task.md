@@ -13,18 +13,18 @@ Note: You can test using curl on the given app server as LBR URL will not work f
 
 `sudo -i`  
 
-## Install httpd
+## 1. Install httpd
 `yum install httpd -y`  
 
 
-## Edit the configuration file
+## 2. Edit the configuration file
 `vi / etc/httpd/conf/httpd.conf`  
 ```console
 +Listen 6100
 ```
 
 
-## Add Header at end
+## 3. Add Header at end
 `vi / etc/httpd/conf/httpd.conf`  
 ```console
 Header set X-XSS-Protection "1; mode=block"
@@ -33,7 +33,7 @@ Header set X-Content-Type-Options nosniff
 ```
 
 
-## Create Index file with given content
+## 4. Create Index file with given content
 `ll /var/www/html/`  
 `vi /var/www/html/index.html`  
 ```console
@@ -41,11 +41,11 @@ Header set X-Content-Type-Options nosniff
 ```
 
 
-## Start httpd & check the status
+## 5. Start httpd & check the status
 `systemctl start httpd && systemctl status httpd`  
 
 
-## Validate the task by Curl
+## 6. Validate the task by Curl
 `curl http://localhost:8083`  
 `curl -Ik http://localhost:8083`  
 
