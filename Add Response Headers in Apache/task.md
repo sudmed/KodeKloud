@@ -50,7 +50,7 @@ Header set X-Content-Type-Options nosniff
 `curl -Ik http://localhost:8083`  
 
 `curl -i http://localhost:8083`  
-```bash
+```console
 X-Frame-Options: SAMEORIGIN
 X-XSS-Protection: 1; mode=block
 X-Content-Type-Options: nosniff
