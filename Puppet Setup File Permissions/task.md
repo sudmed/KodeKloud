@@ -64,7 +64,7 @@ Notice: Applied catalog in 0.16 seconds
 Welcome to xFusionCorp Industries!
 ```
 
-
+---
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62e8da789632143213f930d3
