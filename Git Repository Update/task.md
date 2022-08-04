@@ -65,13 +65,6 @@ total 12
 
 
 ## 3. Copy the file to repo directory
-`cd /usr/src/kodekloudrepos/`  
-`ll`  
-```console
-total 4
-drwxr-xr-x 3 root root 4096 Aug  4 15:24 official
-```
-
 `ll /usr/src/kodekloudrepos/official/`  
 ```console
 total 8
