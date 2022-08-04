@@ -44,7 +44,8 @@ index.html
 
 
 ## 2. Login to Storage Server
-`ssh natasha@ststor01`  
+`ssh natasha@ststor01` 
+```console
 The authenticity of host 'ststor01 (172.16.238.15)' can't be established.
 ECDSA key fingerprint is SHA256:fXbAAzzAnYa/tNDwq9XkZXoyQMXXB51yZIT+R6WFbks.
 ECDSA key fingerprint is MD5:ba:20:a8:b1:4c:2c:00:7f:51:99:1a:b5:1f:34:07:95.
