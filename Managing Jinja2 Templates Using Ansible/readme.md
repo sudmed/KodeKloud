@@ -132,7 +132,7 @@ This file was created using Ansible on stapp03
 -rwxrwxrwx 1 banner banner 48 Aug  5 20:59 /var/www/html/index.html
 ```
 
-## 6*. Validate the task with ansible ad-hoc command module which executes just through the ssh
+## 6*. Validate the task with ansible ad-hoc command module which executes just through SSH
 ```shell
   Syntax:
 ansible [-i INVENTORY] [server] [-m MODULE] {-a MODULE_OPTIONS}
