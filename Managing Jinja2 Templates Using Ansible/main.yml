@@ -1,17 +1,21 @@
 ---
-#task file for role/test
-- name: install the latest version of httpd
+# tasks file for role/test
+
+- name: install the latest version of HTTPD
   yum:
     name: httpd
     state: latest
+
 - name: Start service httpd
   service:
     name: httpd
     state: started
-- name: copy template to stapp03
+
+- name: Copy template
   template:
-    src: /home/thor/ansible/role/httpd/templates/index.html.j2
+    src: index.html.j2
     dest: /var/www/html/index.html
-    mode: "0744"
-    owner: "{{ ansible_user }}"
-    group: "{{ ansible_user }}"
+    mode: '0777'
+    owner: {{ ansible_user }}
+    group: {{ ansible_user }}
+...
