@@ -132,6 +132,9 @@ This file was created using Ansible on stapp03
 -rwxrwxrwx 1 banner banner 48 Aug  5 20:59 /var/www/html/index.html
 ```
 
+## 6*. Validate the task with `ansible -a` command which executes just through the ssh
+`ansible -a "cat /var/www/html/index.html" -i inventory stapp03`  
+  
 ---
 
 ```bash
