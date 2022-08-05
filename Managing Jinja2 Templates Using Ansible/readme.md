@@ -137,8 +137,13 @@ This file was created using Ansible on stapp03
   Syntax:
 ansible [-i INVENTORY] [server] [-m MODULE] {-a MODULE_OPTIONS}
 ```
+
 `ansible -i inventory stapp03 -m command -a "cat /var/www/html/index.html"`  
-  
+```shell
+This file was created using Ansible on stapp03
+```
+
+
 ---
 
 ```bash
