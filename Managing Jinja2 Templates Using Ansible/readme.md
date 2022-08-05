@@ -133,7 +133,11 @@ This file was created using Ansible on stapp03
 ```
 
 ## 6*. Validate the task with ansible ad-hoc command module which executes just through the ssh
-`ansible stapp03 -m command -a "cat /var/www/html/index.html" -i inventory`  
+```shell
+  Syntax:
+ansible [-i INVENTORY] [server] [-m MODULE] {-a MODULE_OPTIONS}
+```
+`ansible -i inventory stapp03 -m command -a "cat /var/www/html/index.html"`  
   
 ---
 
