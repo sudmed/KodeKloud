@@ -41,7 +41,6 @@ stapp03 ansible_host=172.16.238.12 ansible_user=banner ansible_ssh_pass=BigGr33n
 
 
 ## 3. Create jinja2 template
-`touch /home/thor/ansible/role/httpd/templates/index.html.j2`  
 `vi /home/thor/ansible/role/httpd/templates/index.html.j2`  
 ```console
 This file was created using Ansible on {{ inventory_hostname }}
@@ -84,8 +83,8 @@ This file was created using Ansible on {{ inventory_hostname }}
     src: index.html.j2
     dest: /var/www/html/index.html
     mode: '0777'
-    owner: banner
-    group: banner
+    owner: {{ ansible_user }}
+    group: {{ ansible_user }}
 ```
 
 ## 5. Run ansible playbook
@@ -122,6 +121,7 @@ Warning: Permanently added 'stapp03' (ECDSA) to the list of known hosts.
 banner@stapp03's password: 
 Last login: Fri Aug  5 21:00:12 2022 from jump_host.devops-ansible-jinja2-v2_app_net
 ```
+
 `cat /var/www/html/index.html`  
 ```shell
 This file was created using Ansible on stapp03
@@ -133,6 +133,7 @@ This file was created using Ansible on stapp03
 ```
 
 ---
+
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62ed3f783cf167f52645d41d
