@@ -7,7 +7,7 @@ Limits: Memory: 20Mi, CPU: 100m
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.  
 
 
-## 1. Configure kubectl utility
+## 1. Check namespace and pods
 `kubectl get namespace`  
 ```shell
 NAME                 STATUS   AGE
