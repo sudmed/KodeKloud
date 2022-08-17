@@ -201,7 +201,7 @@ deployment.apps/redis-deployment edited
 ```
 
 
-## 4. 
+## 4. Validate the fix
 `kubectl get deploy`  
 ```shell
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
