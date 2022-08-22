@@ -89,6 +89,7 @@ configmap/my-redis-config created
 deployment.apps/redis-deployment created
 ```
 
+## 4. Check pods and services
 `kubectl get all`  
 ```console
 NAME                                    READY   STATUS    RESTARTS   AGE
