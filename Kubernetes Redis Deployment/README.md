@@ -82,7 +82,7 @@ spec:
 ```
 
 
-## 3. 
+## 3. Create resource from a file
 `kubectl create -f /tmp/redis.yml`  
 ```console
 configmap/my-redis-config created
