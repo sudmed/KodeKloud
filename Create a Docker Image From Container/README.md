@@ -1,10 +1,10 @@
 # Create a Docker Image From Container
-One of the Nautilus developer was working to test new changes on a container. He wants to keep a backup of his changes to the container. A new request has been raised for the DevOps team to create a new image from this container. Below are more details about it:
+One of the Nautilus developer was working to test new changes on a container. He wants to keep a backup of his changes to the container.  
+A new request has been raised for the DevOps team to create a new image from this container. Below are more details about it:  
 a. Create an image blog:datacenter on Application Server 2 from a container ubuntu_latest that is running on same server.
 
 
-
-## 0. Login to Application Server 2     # Am3ric@
+## 0. Login to Application Server 2
 `ssh steve@stapp02`  
 ```console
 steve@stapp02's password: 
@@ -53,6 +53,7 @@ REPOSITORY   TAG          IMAGE ID       CREATED          SIZE
 blog         datacenter   05751720dae9   19 seconds ago   114MB
 ubuntu       latest       df5de72bdb3b   3 weeks ago      77.8MB
 ```
+
 
 ---
 
