@@ -7,7 +7,7 @@ a. Create an image blog:datacenter on Application Server 2 from a container ubun
 ## 0. Login to Application Server 2
 `ssh steve@stapp02`  
 ```console
-steve@stapp02's password: 
+steve@stapp02's password: Am3ric@
 ```
 
 `sudo -i`  
@@ -19,7 +19,7 @@ Administrator. It usually boils down to these three things:
     #2) Think before you type.
     #3) With great power comes great responsibility.
 
-[sudo] password for steve: 
+[sudo] password for steve: Am3ric@
 ```
 
 
