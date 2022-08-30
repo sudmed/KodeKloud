@@ -1,0 +1,6 @@
+- name: Ansible Copy Module
+  hosts: all
+  become: true
+  tasks:
+    - name: copy index.html to sysops folder
+      copy: src=/usr/src/sysops/index.html dest=/opt/sysops
