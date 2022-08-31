@@ -60,11 +60,6 @@ pod/print-envars-greeting created
 
 
 ## 4. Validate the task
-`kubectl logs print-envars-greeting`  
-```console
-Welcome to DevOps Ltd
-```
-
 `kubectl logs -f print-envars-greeting`  
 ```console
 Welcome to DevOps Ltd
