@@ -9,8 +9,8 @@ Create three environment variables:
 a. GREETING and its value should be Welcome to.  
 b. COMPANY and its value should be DevOps.  
 c. GROUP and its value should be Ltd.  
-Use command to echo ["$(GREETING) $(COMPANY) $(GROUP)"] message.  
-You can check the output using <kubctl logs -f [ pod-name ]> command.  
+Use command to echo `["$(GREETING) $(COMPANY) $(GROUP)"]` message.  
+You can check the output using `<kubectl logs -f [ pod-name ]>` command.  
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
 
