@@ -45,7 +45,6 @@ The key's randomart image is:
 
 ## 3. Copy SSH key to the host
 `ssh-copy-id banner@stapp03`  
-`# BigGr33n`  
 ```console
 /bin/ssh-copy-id: INFO: Source of key(s) to be installed: "/home/thor/.ssh/id_rsa.pub"
 The authenticity of host 'stapp03 (172.16.238.12)' can't be established.
