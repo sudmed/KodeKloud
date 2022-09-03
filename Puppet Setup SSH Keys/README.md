@@ -1,11 +1,15 @@
 # Puppet Setup SSH Keys
 
-The Puppet master and Puppet agent nodes have been set up by the Nautilus DevOps team to perform some testing. In Stratos DC all app servers have been configured as Puppet agent nodes. They want to setup a password less SSH connection between Puppet master and Puppet agent nodes and this task needs to be done using Puppet itself. Below are details about the task:
-Create a Puppet programming file demo.pp under /etc/puppetlabs/code/environments/production/manifests directory on the Puppet master node i.e on Jump Server. Define a class ssh_node1 for agent node 1 i.e App Server 1, ssh_node2 for agent node 2 i.e App Server 2, ssh_node3 for agent node3 i.e App Server 3. You will need to generate a new ssh key for thor user on Jump Server, that needs to be added on all App Servers.
-Configure a password less SSH connection from puppet master i.e jump host to all App Servers. However, please make sure the key is added to the authorized_keys file of each app's sudo user (i.e tony for App Server 1).
-Notes: :- Before clicking on the Check button please make sure to verify puppet server and puppet agent services are up and running on the respective servers, also please make sure to run puppet agent test to apply/test the changes manually first.
-:- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.
-
+The Puppet master and Puppet agent nodes have been set up by the Nautilus DevOps team to perform some testing.  
+In Stratos DC all app servers have been configured as Puppet agent nodes. They want to setup a password less SSH connection between  
+Puppet master and Puppet agent nodes and this task needs to be done using Puppet itself. Below are details about the task:  
+Create a Puppet programming file demo.pp under /etc/puppetlabs/code/environments/production/manifests directory on the Puppet master node i.e on Jump Server.  
+Define a class ssh_node1 for agent node 1 i.e App Server 1, ssh_node2 for agent node 2 i.e App Server 2, ssh_node3 for agent node3 i.e App Server 3.  
+You will need to generate a new ssh key for thor user on Jump Server, that needs to be added on all App Servers.  
+Configure a password less SSH connection from puppet master i.e jump host to all App Servers. However, please make sure the key is added to the authorized_keys file of each app's sudo user (i.e tony for App Server 1).  
+Notes: :- Before clicking on the Check button please make sure to verify puppet server and puppet agent services are up and running on the respective servers,  
+also please make sure to run puppet agent test to apply/test the changes manually first.
+:- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.  
 
 
 ## 1. Copy the public key
@@ -42,7 +46,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv9SvO48stgnPikHDVnULiwKVBG2fN7YPPJ8wTm/g2
 ## 2. Create puppet file
 `cd /etc/puppetlabs/code/environments/production/manifests`  
 `vi demo.pp`  
-```console
+```yaml
 $public_key =  'AAAAB3NzaC1yc2EAAAADAQABAAABAQCv9SvO48stgnPikHDVnULiwKVBG2fN7YPPJ8wTm/g2Kha+7ZS7lJ/8vgJL7YWkiUlx+f5PfZ8ftsMfkrf/lgxSK/Yu9MdXqcO7IN0P7QvKl1aYEsgwhRwGoXMSDaETH7HuhC3Nng6UiyG5M9/QibOvmQ3nPXLcfOcVB0fuZDTA3tBGYUZ9GbhAHHzwnGIHfayUHQxhrGkjJHhC7kg+uY+li4ABa2grKLTDHKXFbnptbX9QZCtJRg7HYIrLWnMLqZMi24caWn5dPo9+3MKRR2PZfjyHVHxBA0EmxRTkmwAXwq6G/h7/P15uFXf+XQQuelW1JOflmLt5v89Fk/wQs6xP'
 
 class ssh_node1 {
