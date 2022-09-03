@@ -46,7 +46,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCv9SvO48stgnPikHDVnULiwKVBG2fN7YPPJ8wTm/g2
 ## 2. Create puppet file
 `cd /etc/puppetlabs/code/environments/production/manifests`  
 `vi demo.pp`  
-```yaml
+```puppet
 $public_key =  'AAAAB3NzaC1yc2EAAAADAQABAAABAQCv9SvO48stgnPikHDVnULiwKVBG2fN7YPPJ8wTm/g2Kha+7ZS7lJ/8vgJL7YWkiUlx+f5PfZ8ftsMfkrf/lgxSK/Yu9MdXqcO7IN0P7QvKl1aYEsgwhRwGoXMSDaETH7HuhC3Nng6UiyG5M9/QibOvmQ3nPXLcfOcVB0fuZDTA3tBGYUZ9GbhAHHzwnGIHfayUHQxhrGkjJHhC7kg+uY+li4ABa2grKLTDHKXFbnptbX9QZCtJRg7HYIrLWnMLqZMi24caWn5dPo9+3MKRR2PZfjyHVHxBA0EmxRTkmwAXwq6G/h7/P15uFXf+XQQuelW1JOflmLt5v89Fk/wQs6xP'
 
 class ssh_node1 {
