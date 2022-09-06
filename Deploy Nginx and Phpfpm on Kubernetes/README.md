@@ -12,8 +12,8 @@ b) Create a shared volume shared-files that will be used by both containers (ngi
 c) Map the ConfigMap we declared above as a volume for nginx container. Name the volume as nginx-config-volume, mount path should be /etc/nginx/nginx.conf and subPath should be nginx.conf.  
 d) Nginx container should be named as nginx-container and it should use nginx:latest image. PhpFPM container should be named as php-fpm-container and it should use php:7.2-fpm image.  
 e) The shared volume shared-files should be mounted at /var/www/html location in both containers. Copy /opt/index.php from jump host to the nginx document root inside nginx container, once done you can access the app using App button on the top bar.  
-Before clicking on finish button always make sure to check if all pods are in running state.  
-You can use any labels as per your choice.  
+
+Before clicking on finish button always make sure to check if all pods are in running state. You can use any labels as per your choice.  
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.  
 
 
