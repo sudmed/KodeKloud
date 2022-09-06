@@ -4,7 +4,7 @@ The Nautilus Application Development team is planning to deploy one of the php-b
 As per discussion with DevOps team they have decided to use nginx and phpfpm. Additionally, they shared some custom configuration requirements.  
 Below you can find more details. Please complete the task as per requirements mentioned below:  
 1) Create a service to expose this app, the service type must be NodePort, nodePort should be 30012.  
-2.) Create a config map nginx-config for nginx.conf as we want to add some custom settings for nginx.conf.  
+2) Create a config map nginx-config for nginx.conf as we want to add some custom settings for nginx.conf.  
 a) Change default port 80 to 8097 in nginx.conf.  
 b) Change default document root /usr/share/nginx to /var/www/html in nginx.conf.  
 c) Update directory index to index index.html index.htm index.php in nginx.conf.  
