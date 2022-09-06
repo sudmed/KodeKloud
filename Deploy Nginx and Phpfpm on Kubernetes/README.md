@@ -8,7 +8,7 @@ Below you can find more details. Please complete the task as per requirements me
 a) Change default port 80 to 8097 in nginx.conf.  
 b) Change default document root /usr/share/nginx to /var/www/html in nginx.conf.  
 c) Update directory index to index index.html index.htm index.php in nginx.conf.  
-3.) Create a pod named nginx-phpfpm.  
+3) Create a pod named nginx-phpfpm.  
 b) Create a shared volume shared-files that will be used by both containers (nginx and phpfpm) also it should be a emptyDir volume.  
 c) Map the ConfigMap we declared above as a volume for nginx container. Name the volume as nginx-config-volume, mount path should be /etc/nginx/nginx.conf and subPath should be nginx.conf.  
 d) Nginx container should be named as nginx-container and it should use nginx:latest image. PhpFPM container should be named as php-fpm-container and it should use php:7.2-fpm image.  
