@@ -7,12 +7,9 @@ c. Load that image archive on App Server 3 with same name and tag which was used
 Note: Docker is already installed on both servers; however, if its service is down please make sure to start it.  
 
 
-## 1. Login on App server
+## 1. Login on source server and list docker images
 `ssh tony@stapp01`  
 `sudo -i`  
-
-
-## 2. List docker images
 `docker image list`  
 ```console
 REPOSITORY   TAG        IMAGE ID       CREATED              SIZE
@@ -21,7 +18,7 @@ ubuntu       latest     2dc39ba059dc   7 days ago           77.8MB
 ```
 
 
-## 3. Save the image ecommerce:nautilus in an archive 
+## 2. Save the image as archive
 `docker save -o /tmp/ecommerce.tar ecommerce:nautilus`  
 
 `ll -h /tmp`  
@@ -34,7 +31,7 @@ total 112M
 ```
 
 
-## 4. Copy the tar file on Stapp03 app server
+## 3. Copy an archive on destination server
 `scp /tmp/ecommerce.tar banner@stapp03:/tmp`  
 ```console
 The authenticity of host 'stapp03 (172.16.238.12)' can't be established.
@@ -47,12 +44,9 @@ ecommerce.tar
 ```
 
 
-## 5. Login on  Stapp03 app server & switch to root
+## 4. Login on destination server and check copied archive
 `ssh banner@stapp03`  
 `sudo -i`  
-
-
-## 6. Go to tmp folder and confirm the tar file copied successfully 
 `ll -h /tmp`  
 ```console
 total 112M
@@ -62,7 +56,7 @@ total 112M
 ```
 
 
-## 7. Start Docker service
+## 5. Check if Docker exists
 `docker version`  
 ```console
 Client: Docker Engine - Community
@@ -93,7 +87,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 ```
 
 
-## 8. Load that image archive 
+## 6. Load the image as archive 
 `docker load -i ecommerce.tar`  
 ```console
 7f5cbd8cc787: Loading layer [==================================================>]  80.35MB/80.35MB
@@ -102,7 +96,7 @@ Loaded image: ecommerce:nautilus
 ```
 
 
-## 9. Validate the task
+## 7. Validate the task
 `docker image list`  
 ```console
 REPOSITORY   TAG        IMAGE ID       CREATED         SIZE
