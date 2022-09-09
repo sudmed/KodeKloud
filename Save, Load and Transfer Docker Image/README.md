@@ -18,7 +18,7 @@ ubuntu       latest     2dc39ba059dc   7 days ago           77.8MB
 ```
 
 
-## 2. Save the image as archive
+## 2. Save the image from task in an archive
 `docker save -o /tmp/ecommerce.tar ecommerce:nautilus`  
 
 `ll -h /tmp`  
@@ -31,7 +31,7 @@ total 112M
 ```
 
 
-## 3. Copy an archive on destination server
+## 3. Transfer an archive to destination server
 `scp /tmp/ecommerce.tar banner@stapp03:/tmp`  
 ```console
 The authenticity of host 'stapp03 (172.16.238.12)' can't be established.
@@ -44,7 +44,7 @@ ecommerce.tar
 ```
 
 
-## 4. Login on destination server and check copied archive
+## 4. Login on destination server and check just copied archive
 `ssh banner@stapp03`  
 `sudo -i`  
 `ll -h /tmp`  
@@ -56,7 +56,7 @@ total 112M
 ```
 
 
-## 5. Check if Docker exists
+## 5. Check if Docker exists on destination server
 `docker version`  
 ```console
 Client: Docker Engine - Community
@@ -87,7 +87,7 @@ Created symlink from /etc/systemd/system/multi-user.target.wants/docker.service 
 ```
 
 
-## 6. Load the image as archive 
+## 6. Load the image archive
 `docker load -i ecommerce.tar`  
 ```console
 7f5cbd8cc787: Loading layer [==================================================>]  80.35MB/80.35MB
