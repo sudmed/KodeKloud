@@ -16,7 +16,7 @@ Clone this git repository under /usr/src/kodekloudrepos directory. Please do not
 Cloning into 'blog'...
 warning: You appear to have cloned an empty repository.
 done.
-```console
+```
 
 ## 3. Validate the task successfully by list the folder
 `ll blog/`  
