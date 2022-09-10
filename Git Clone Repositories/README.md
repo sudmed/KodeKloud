@@ -5,14 +5,12 @@ The repo that needs to be cloned is /opt/blog.git.
 Clone this git repository under /usr/src/kodekloudrepos directory. Please do not try to make any changes in repo.  
 
 
-## 1. Login to the storage server
+## 1. Login to destination server
 `ssh natasha@ststor01`  
 `sudo -i`  
 
-## 2. Clone git repository under directory mentioned in your task 
+## 2. Clone git repository under directory mentioned in your task
 `cd /usr/src/kodekloudrepos`  
-
-## 3 . Run command  to clone
 `git clone /opt/blog.git`  
 ```console
 Cloning into 'blog'...
@@ -20,7 +18,7 @@ warning: You appear to have cloned an empty repository.
 done.
 ```console
 
-## 4. Validate the task successfully by list the folder
+## 3. Validate the task successfully by list the folder
 `ll blog/`  
 ```console
 total 0
