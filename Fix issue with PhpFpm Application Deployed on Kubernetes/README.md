@@ -211,7 +211,7 @@ index.php
 ```
 
 `cat /var/www/html/index.php`  
-```console
+```php
 <?php
 
 // Show all information, defaults to INFO_ALL
