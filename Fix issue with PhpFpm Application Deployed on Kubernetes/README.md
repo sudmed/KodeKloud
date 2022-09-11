@@ -208,8 +208,9 @@ nginx-phpfpm-dp-5cccd45499-z9hrq   2/2     Running   0          37s
 ```console
 # ls /var/www/html  
 index.php  
+```
 
-cat /var/www/html/index.php
+`cat /var/www/html/index.php`  
 ```console
 <?php
 
