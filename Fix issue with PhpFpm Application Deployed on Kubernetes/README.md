@@ -204,7 +204,7 @@ nginx-phpfpm-dp-5cccd45499-z9hrq   2/2     Running   0          37s
 
 
 ## 6. Validate the task
-`kubectl exec -it nginx-phpfpm-dp-5cccd45499-8kzws -c nginx-container -- bash`  
+`kubectl exec -it nginx-phpfpm-dp-5cccd45499-z9hrq -c nginx-container -- bash`  
 ```console
 # ls /var/www/html  
 index.php  
