@@ -136,7 +136,9 @@ Events:                   <none>
 
 ## 2. Edit errors in service (change container port from 8092 to 80)
 `kubectl edit service nginx-service`  
+```console
 service/nginx-service edited
+```
 
 
 ## 3. Edit error in configmap (add index.php into default_server)
