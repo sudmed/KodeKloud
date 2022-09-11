@@ -134,7 +134,7 @@ Events:                   <none>
 ```
 
 
-## 2. Edit errors in service (change container port from 8092 to 80)
+## 2. Edit errors in service (change container port from 8098 to 80)
 `kubectl edit service nginx-service`  
 ```console
 service/nginx-service edited
