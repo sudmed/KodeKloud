@@ -62,7 +62,7 @@ pod/pod-httpd created
 `kubectl get pods`  
 ```console
 NAME        READY   STATUS              RESTARTS   AGE
-pod-httpd   0/1     ContainerCreating   0          11s
+pod-httpd   1/1     ContainerCreating   0          41s
 ```
 
 ---
