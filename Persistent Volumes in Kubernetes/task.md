@@ -8,7 +8,7 @@ Create a node port type service named web-devops using node port 30008 to expose
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.  
 
 
-### from jump server
+## 1. Reconnaissance on the server
 **kubectl get services**
 ```console
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
@@ -25,9 +25,9 @@ No resources found in default namespace.
 No resources found in default namespace.
 ```
 
-### Create yaml
+## 2. Create YAML file
 **vi /tmp/httpd.yaml**
-```console
+```yaml
 ---
 apiVersion: v1
 kind: PersistentVolume
@@ -89,8 +89,8 @@ spec:
 ```
 
 
-### create pod
-**kubectl create -f /tmp/httpd.yaml**
+## 3. Run YAML file
+**kubectl apply -f /tmp/httpd.yaml**
 ```console
 persistentvolume/pv-devops created
 persistentvolumeclaim/pvc-devops created
@@ -99,20 +99,18 @@ service/web-devops created
 ```
 
 
-### get running status
+## 4. Check status
 **kubectl get pods**
 ```console
 NAME         READY   STATUS    RESTARTS   AGE
 pod-devops   1/1     Running   0          12s
 ```
 
-
 **kubectl get pvc**
 ```console
 NAME           STATUS   VOLUME        CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 pvc-nautilus   Bound    pv-nautilus   5Gi        RWO            manual         46s
 ```
-
 
 **kubectl describe pvc pvc-nautilus**
 ```console
@@ -132,7 +130,6 @@ Mounted By:    pod-devops
 Events:        <none>
 ```
 
-
 **kubectl get all**
 ```console
 NAME               READY   STATUS    RESTARTS   AGE
@@ -143,13 +140,13 @@ service/kubernetes     ClusterIP   10.96.0.1      <none>        443/TCP        1
 service/web-nautilus   NodePort    10.96.199.70   <none>        80:30008/TCP   2m19s
 ```
 
-
 **kubectl get pv**
 ```console
 NAME          CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                  STORAGECLASS   REASON   AGE
 pv-nautilus   5Gi        RWO            Retain           Bound    default/pvc-nautilus   manual                  3m8s
 ```
 
+---
 
 
 ```console
