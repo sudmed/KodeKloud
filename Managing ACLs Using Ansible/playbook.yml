@@ -1,0 +1,48 @@
+---
+- hosts: stapp01
+  become: yes
+  tasks:
+    - name: Touch empty file stapp01
+      file:
+        path: "/opt/itadmin/blog.txt"
+        state: touch
+        owner: root
+    - name: Configure ACL
+      acl:
+        path: "/opt/itadmin/blog.txt"
+        entity: tony
+        etype: group
+        permissions: r
+        state: present
+        
+- hosts: stapp02
+  become: yes
+  tasks:
+    - name: Touch empty file stapp02
+      file:
+        path: "/opt/itadmin/story.txt"
+        state: touch 
+        owner: root
+    - name: Configure ACL
+      acl: 
+        path: "/opt/itadmin/story.txt"
+        entity: steve
+        etype: user
+        permissions: rw
+        state: present
+        
+- hosts: stapp03
+  become: yes
+  tasks:
+    - name: Touch empty file stapp03
+      file:
+        path: "/opt/itadmin/media.txt"
+        state: touch 
+        owner: root
+    - name: Configure ACL
+      acl: 
+        path: "/opt/itadmin/media.txt"
+        entity: banner
+        etype: group
+        permissions: rw
+        state: present
