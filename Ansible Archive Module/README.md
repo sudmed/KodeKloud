@@ -29,6 +29,16 @@ stapp02 ansible_host=172.16.238.11 ansible_ssh_pass=Am3ric@ ansible_user=steve
 stapp03 ansible_host=172.16.238.12 ansible_ssh_pass=BigGr33n ansible_user=banner
 ```
 
+`ansible --version`  
+```console
+ansible 2.9.9
+  config file = /home/thor/ansible/ansible.cfg
+  configured module search path = [u'/home/thor/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /bin/ansible
+  python version = 2.7.5 (default, Jun 20 2019, 20:27:34) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
+```
+
 `ansible all -a "ls /opt/devops/" -i inventory`  
 ```ansible
 stapp01 | CHANGED | rc=0 >>
@@ -91,4 +101,7 @@ apps.tar.gz
 
 ---
 
-
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:632571571da11b53193e756f
+```
