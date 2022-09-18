@@ -32,6 +32,6 @@
     blockinfile:
       path: /var/www/html/index.html
       block: |
-Welcome to XfusionCorp!
-This is Nautilus sample file, created using Ansible!
-Please do not modify this file manually!
+        Welcome to XfusionCorp!
+        This is Nautilus sample file, created using Ansible!
+        Please do not modify this file manually!
