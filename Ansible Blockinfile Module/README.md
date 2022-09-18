@@ -14,7 +14,7 @@ Note:
 - ii. Do not use any custom or empty marker for blockinfile module.  
 
 
-## 1. 
+## 1. Reconnaissance on the server
 `cd /home/thor/ansible/`  
 `ll`  
 ```console
