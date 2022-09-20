@@ -105,6 +105,7 @@ grafana-deployment-nautilus-7fd6c56b94-tdn6g   0/1     ContainerCreating   0    
 ```
 
 `kubectl get svc`  
+```console
 NAME         TYPE        CLUSTER-IP     EXTERNAL-IP   PORT(S)          AGE
 grafana      NodePort    10.96.183.90   <none>        3000:32000/TCP   21s
 kubernetes   ClusterIP   10.96.0.1      <none>        443/TCP          3h30m
