@@ -33,7 +33,7 @@ nothing to commit, working directory clean
 ```
 
 
-## 3. Create a new branch as per the task
+## 3. Create new branch
 `git checkout -b nautilus`  
 ```console
 Switched to a new branch 'nautilus'
