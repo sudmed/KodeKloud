@@ -69,7 +69,7 @@ Date:   Fri Sep 23 10:09:41 2022 +0000
 ```
 
 
-5. Validate the task
+## 5. Validate the task
 `git log`  
 ```console
 commit 0e692c5c5be56785f5c0e570db9bbb2ab998ed73
