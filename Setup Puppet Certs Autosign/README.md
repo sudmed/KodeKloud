@@ -1,12 +1,13 @@
 # Setup Puppet Certs Autosign
 
-During last weekly meeting, the Nautilus DevOps team has decided to use Puppet autosign config to auto sign the certificates for all Puppet agent nodes that they will keep adding under the Puppet master in Stratos DC. The Puppet master and CA servers are currently running on jump host and all three app servers are configured as Puppet agents. To set up autosign configuration on the Puppet master server, some configuration settings must be done. Please find below more details:
-The Puppet server package is already installed on puppet master i.e jump server and the Puppet agent package is already installed on all App Servers. However, you may need to start the required services on all of these servers.
-Configure autosign configuration on the Puppet master i.e jump server (by creating an autosign.conf in the puppet configuration directory) and assign the certificates for master node as well as for the all agent nodes. Use the respective host's FDQN to assign the certificates.
-Use alias puppet (dns_alt_names) for master node and add its entry in /etc/hosts config file on master i.e Jump Server as well as on the all agent nodes i.e App Servers.
-Notes: :- Please make sure to run the puppet agent test using sudo on agent nodes, otherwise you can face certificate issues. In that case you will have to clean the certificates first and then you will be able to run the puppet agent test.
-:- Before clicking on the Check button please make sure to verify puppet server and puppet agent services are up and running on the respective servers, also please make sure to run puppet agent test to apply/test the changes manually first.
-:- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.
+During last weekly meeting, the Nautilus DevOps team has decided to use Puppet autosign config to auto sign the certificates for all Puppet agent nodes that they will keep adding under the Puppet master in Stratos DC. The Puppet master and CA servers are currently running on jump host and all three app servers are configured as Puppet agents. To set up autosign configuration on the Puppet master server, some configuration settings must be done. Please find below more details:  
+The Puppet server package is already installed on puppet master i.e jump server and the Puppet agent package is already installed on all App Servers. However, you may need to start the required services on all of these servers.  
+Configure autosign configuration on the Puppet master i.e jump server (by creating an autosign.conf in the puppet configuration directory) and assign the certificates for master node as well as for the all agent nodes. Use the respective host's FDQN to assign the certificates.  
+Use alias puppet (dns_alt_names) for master node and add its entry in /etc/hosts config file on master i.e Jump Server as well as on the all agent nodes i.e App Servers.  
+Notes:  
+- Please make sure to run the puppet agent test using sudo on agent nodes, otherwise you can face certificate issues. In that case you will have to clean the certificates first and then you will be able to run the puppet agent test.
+- Before clicking on the Check button please make sure to verify puppet server and puppet agent services are up and running on the respective servers, also please make sure to run puppet agent test to apply/test the changes manually first.
+- Please note that once lab is loaded, the puppet server service should start automatically on puppet master server, however it can take upto 2-3 minutes to start.
 
 
 
@@ -174,15 +175,15 @@ Notice: Applied catalog in 0.01 seconds
 ```
 
 
-## 4. List certificates on puppet server (jumpserver)
+## 4. List certificates on puppet server
 `puppetserver ca list --all`  
 ```console
 Signed Certificates:
     964369dd618d.c.argo-prod-us-east1.internal       (SHA256)  8C:19:47:FD:59:97:CE:0C:1D:DF:52:92:A3:BA:41:22:F2:3D:95:D4:38:D9:EF:85:65:9A:7B:B5:59:D5:CA:E6  alt names: ["DNS:puppet", "DNS:964369dd618d.c.argo-prod-us-east1.internal"]  authorization extensions: [pp_cli_auth: true]
     jump_host.stratos.xfusioncorp.com                (SHA256)  D9:E4:7C:05:1B:F7:E4:05:E2:B3:86:BE:D8:A7:F9:A6:A9:2A:8A:5C:EC:27:98:E3:5B:C3:EA:44:4E:E0:7D:D7  alt names: ["DNS:puppet", "DNS:jump_host.stratos.xfusioncorp.com"]   authorization extensions: [pp_cli_auth: true]
+    stapp01.stratos.xfusioncorp.com                  (SHA256)  0D:F5:43:28:F3:A5:95:EE:6D:3C:FF:3A:BF:FA:90:6E:78:EE:2B:C6:4F:98:98:7D:9A:D1:C2:70:43:CD:E4:70  alt names: ["DNS:stapp01.stratos.xfusioncorp.com"]
     stapp02.stratos.xfusioncorp.com                  (SHA256)  42:B9:4A:47:A3:64:8B:90:D7:70:BD:29:36:FC:9B:C0:B2:8F:6E:5F:4F:17:01:5D:02:0F:C2:2D:18:A4:E6:4B  alt names: ["DNS:stapp02.stratos.xfusioncorp.com"]
     stapp03.stratos.xfusioncorp.com                  (SHA256)  0F:32:70:18:A1:05:1C:44:6B:8D:75:28:8D:36:07:FC:83:66:C4:33:57:AA:EB:D4:0D:EF:04:53:40:6A:C7:10  alt names: ["DNS:stapp03.stratos.xfusioncorp.com"]
-    stapp01.stratos.xfusioncorp.com                  (SHA256)  0D:F5:43:28:F3:A5:95:EE:6D:3C:FF:3A:BF:FA:90:6E:78:EE:2B:C6:4F:98:98:7D:9A:D1:C2:70:43:CD:E4:70  alt names: ["DNS:stapp01.stratos.xfusioncorp.com"]
 ```
 
 
