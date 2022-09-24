@@ -44,7 +44,7 @@ rtt min/avg/max/mdev = 15.440/15.671/16.096/0.300 ms
 
 ## 2. Add the alias for the puppet server
 `vi /etc/hosts`  
-`172.16.238.3    jump_host.stratos.xfusioncorp.com jump_host` **puppet**  
+`172.16.238.3    jump_host.stratos.xfusioncorp.com jump_host` <span style="color:red">**puppet**</span>
 
 `ping puppet`  
 ```console
