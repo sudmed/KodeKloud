@@ -65,11 +65,11 @@ rtt min/avg/max/mdev = 0.027/0.031/0.035/0.007 ms
 
 ## 3. Create autosign config
 `vi /etc/puppetlabs/puppet/autosign.conf`  
-```console
-jump_host.stratos.xfusioncorp.com
-stapp01.stratos.xfusioncorp.com
-stapp02.stratos.xfusioncorp.com
-stapp03.stratos.xfusioncorp.com
+```diff
++ jump_host.stratos.xfusioncorp.com
++ stapp01.stratos.xfusioncorp.com
++ stapp02.stratos.xfusioncorp.com
++ stapp03.stratos.xfusioncorp.com
 ```
 
 
