@@ -12,7 +12,7 @@ Notes:
 
 
 
-## 1. Reconnaissance on the jump host server
+## 1. Reconnaissance on the puppet server
 `sudo -i`  
 `cat /etc/hosts`  
 ```console
@@ -42,6 +42,7 @@ PING puppet.stratos.xfusioncorp.com (216.245.213.76) 56(84) bytes of data.
 rtt min/avg/max/mdev = 15.440/15.671/16.096/0.300 ms
 ```
 
+## 2. Add the alias for the puppet server
 `vi /etc/hosts`  
 ```console
 ...
@@ -63,7 +64,7 @@ rtt min/avg/max/mdev = 0.027/0.031/0.035/0.007 ms
 ```
 
 
-## 2. Create autosign config
+## 3. Create autosign config
 `vi /etc/puppetlabs/puppet/autosign.conf`  
 ```console
 jump_host.stratos.xfusioncorp.com
@@ -72,6 +73,8 @@ stapp02.stratos.xfusioncorp.com
 stapp03.stratos.xfusioncorp.com
 ```
 
+
+## 4. Restart the puppet daemon
 `systemctl status puppetserver`  
 ```console
 ● puppetserver.service - puppetserver Service
@@ -98,27 +101,16 @@ stapp03.stratos.xfusioncorp.com
            └─13985 /usr/bin/java -Xms512m -Xmx512m -Djruby.logger.class=com.puppetlabs.jruby_utils.jruby.Slf4jLogger -XX:OnOutOfMemoryError="kill -9 %p" -XX:ErrorFile=/var/log/puppetlabs...
 ```
 
-`puppet agent -tv`  
-```console
-Info: Using configured environment 'production'
-Info: Retrieving pluginfacts
-Info: Retrieving plugin
-Info: Retrieving locales
-Info: Caching catalog for jump_host.stratos.xfusioncorp.com
-Info: Applying configuration version '1664038598'
-Info: Creating state file /opt/puppetlabs/puppet/cache/state/state.yaml
-Notice: Applied catalog in 0.01 seconds
-```
 
+## 5. Check certificates on puppet server
 `puppetserver ca list --all`  
 ```console
 Signed Certificates:
     964369dd618d.c.argo-prod-us-east1.internal       (SHA256)  8C:19:47:FD:59:97:CE:0C:1D:DF:52:92:A3:BA:41:22:F2:3D:95:D4:38:D9:EF:85:65:9A:7B:B5:59:D5:CA:E6  alt names: ["DNS:puppet", "DNS:964369dd618d.c.argo-prod-us-east1.internal"]  authorization extensions: [pp_cli_auth: true]
-    jump_host.stratos.xfusioncorp.com                (SHA256)  D9:E4:7C:05:1B:F7:E4:05:E2:B3:86:BE:D8:A7:F9:A6:A9:2A:8A:5C:EC:27:98:E3:5B:C3:EA:44:4E:E0:7D:D7  alt names: ["DNS:puppet", "DNS:jump_host.stratos.xfusioncorp.com"]   authorization extensions: [pp_cli_auth: true]
 ```
 
 
-## 3. Login on stapp01, stapp02, stapp03 and run the same commands
+## 6-8. Login on stapp01, stapp02, stapp03 and run the same commands
 `ssh tony@stapp01`  
 `sudo -i`  
 `vi /etc/hosts`  
@@ -176,7 +168,7 @@ Notice: Applied catalog in 0.01 seconds
 ```
 
 
-## 4. List certificates on puppet server
+## 9. List certificates on puppet server
 `puppetserver ca list --all`  
 ```console
 Signed Certificates:
