@@ -113,14 +113,15 @@ Signed Certificates:
 `ssh tony@stapp01`  
 `sudo -i`  
 `vi /etc/hosts`  
-```console
+```diff
 127.0.0.1       localhost
 ::1     localhost ip6-localhost ip6-loopback
 fe00::0 ip6-localnet
 ff00::0 ip6-mcastprefix
 ff02::1 ip6-allnodes
 ff02::2 ip6-allrouters
-172.16.238.3    jump_host.stratos.xfusioncorp.com puppet
+- 172.16.238.3    jump_host.stratos.xfusioncorp.com
++ 172.16.238.3    jump_host.stratos.xfusioncorp.com puppet
 172.16.239.2    stapp03.stratos.xfusioncorp.com stapp03
 172.16.238.12   stapp03.stratos.xfusioncorp.com stapp03
 172.17.0.4      stapp03.stratos.xfusioncorp.com stapp03
