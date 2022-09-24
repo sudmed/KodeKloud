@@ -11,6 +11,7 @@ Notes:
 
 
 
+
 ## 1. Reconnaissance on the jump host server
 `sudo -i`  
 `cat /etc/hosts`  
