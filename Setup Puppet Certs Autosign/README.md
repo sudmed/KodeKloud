@@ -46,7 +46,7 @@ rtt min/avg/max/mdev = 15.440/15.671/16.096/0.300 ms
 `vi /etc/hosts`  
 ```console
 ...
-172.16.238.3    jump_host.stratos.xfusioncorp.com jump_host puppet
+172.16.238.3    jump_host.stratos.xfusioncorp.com jump_host **puppet**
 ...
 ```
 
