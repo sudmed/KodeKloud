@@ -11,7 +11,7 @@ One of the Nautilus DevOps team members was working to configure services on a k
 `sudo -i`  
 
 
-## 2. check the existing docker containers
+## 2. List docker containers
 `docker ps`  
 ```console
 CONTAINER ID   IMAGE          COMMAND   CREATED              STATUS              PORTS     NAMES
@@ -55,7 +55,7 @@ drwxr-xr-x  2 root root  4096 Sep 26 17:17 sites-enabled
 `service apache2 reload`  
 
 
-## 7. Validate the task by Curl
+## 7. Validate the task
 `curl -Ik localhost:8088`  
 ```console
 HTTP/1.1 200 OK
