@@ -19,7 +19,7 @@ e0872343bc03   ubuntu:18.04   "bash"    About a minute ago   Up About a minute  
 ```
 
 
-## 3. Login on docker container & install apache2
+## 3. Install apache2 & vim in docker container
 `docker exec -it e0872343bc03 bash`  
 `apt update`  
 `apt install -y apache2 vim`  
