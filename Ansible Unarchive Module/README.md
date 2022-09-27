@@ -72,7 +72,7 @@ total 4
   hosts: stapp01, stapp02, stapp03
   become: yes
   tasks:
-    - name: Extract the archive and set the owner/permissions
+    - name: Unzip the archive and set its metadata
       unarchive:
         src: /usr/src/itadmin/nautilus.zip
         dest: /opt/itadmin/
