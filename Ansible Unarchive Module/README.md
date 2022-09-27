@@ -68,7 +68,7 @@ total 4
 ## 2. Create the playbook
 `vi playbook.yml`  
 ```yaml
-- name: Extract archive
+- name: Unarchive an archive
   hosts: stapp01, stapp02, stapp03
   become: yes
   tasks:
