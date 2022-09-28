@@ -198,6 +198,7 @@ via: 1.1 google
 alt-svc: h3=":443"; ma=2592000,h3-29=":443"; ma=2592000
 ```
 
+Browser: `https://xFusionCorp:LQfKeWWxWD@30008-port-8bfccd7ef0a54aac.labs.kodekloud.com/`  
 ```console
 Nagios® Core™
 Version 4.4.7
