@@ -155,7 +155,7 @@ Events:
 ```
 
 
-## 5. Set user & password for Nagios on pod
+## 5. Create a user and password for the Nagios on pod
 `kubectl exec -it nagios-deployment-6674945696-7xlqb -- bash`  
 
 `cat /opt/nagios/etc/htpasswd.users`  
