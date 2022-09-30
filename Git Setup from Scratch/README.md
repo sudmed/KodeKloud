@@ -77,7 +77,7 @@ drwxr-xr-x 4 root root 4096 Sep 30 20:47 refs
 `cp /tmp/update /opt/media.git/hooks/`  
 
 
-## 5. Clone git repository
+## 5. Clone Git repository
 `cd /usr/src/kodekloudrepos/`  
 
 `ll`  
@@ -99,7 +99,7 @@ drwxr-xr-x 3 root root 4096 Sep 30 20:50 media
 ```
 
 
-## 6. Create a new branch
+## 6. Create new branch
 `cd /usr/src/kodekloudrepos/media`  
 
 `git checkout -b xfusioncorp_media`  
@@ -135,7 +135,7 @@ To /opt/media.git
 ```
 
 
-## 8. Validate the task - try push to master
+## 8. Validate the task - try to push to master
 `git checkout -b master`  
 ```console
 Switched to a new branch 'master'
