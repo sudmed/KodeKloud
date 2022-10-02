@@ -16,7 +16,7 @@ Note: For these kind of scenarios requiring changes to be done in a web UI, plea
 
 
 # 3.  Fork Git repository sarah/story-blog
-
+![screenshot](/2022-10-02_14-44-53.png)
 
 --
 
