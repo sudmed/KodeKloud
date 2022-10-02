@@ -7,15 +7,15 @@ There you will see a Git repository sarah/story-blog, fork it under jon user.
 Note: For these kind of scenarios requiring changes to be done in a web UI, please take screenshots so that you can share it with us for review in case your task is marked incomplete. You may also consider using a screen recording software such as loom.com to record and share your work.
 
 
-# 1. Click on the Gitea UI button
+## 1. Click on the Gitea UI button
 `https://80-port-e810a0ace5e047a7.labs.kodekloud.com`  
 
 
-# 2. Login to Gitea server
+## 2. Login to Gitea server
 `https://80-port-e810a0ace5e047a7.labs.kodekloud.com/jon/`  
 
 
-# 3.  Fork Git repository sarah/story-blog
+## 3.  Fork Git repository sarah/story-blog
 ![screenshot](Git_Fork_a_Repository.png)
 
 --
