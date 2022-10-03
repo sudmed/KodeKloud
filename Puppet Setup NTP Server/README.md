@@ -1,2 +1,0 @@
-# Puppet Setup NTP Server
-
