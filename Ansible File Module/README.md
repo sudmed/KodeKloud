@@ -11,7 +11,7 @@ Note: Validation will try to run the playbook using command ansible-playbook -i 
 
 ## 1. Create the inventory
 `cd ~/playbook`  
-ll`  
+`ll`  
 ```console
 total 0
 ```
