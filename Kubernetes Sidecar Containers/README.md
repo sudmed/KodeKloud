@@ -208,7 +208,7 @@ drwxr-xr-x 1 root root 4096 Oct  5 12:44 ..
 -rw-r--r-- 1 root root 2874 Oct 13 06:56 error.log
 ```
 
-### 4.2. Check if Nginx running
+### 4.2. Check if Nginx is running
 `curl -Ik localhost`  
 ```console
 HTTP/1.1 200 OK
