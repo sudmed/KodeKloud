@@ -173,7 +173,7 @@ nginx-phpfpm   2/2     Running   0          16s   10.244.0.6   kodekloud-control
 ```
 
 
-## 4. Now copy the index.php
+## 4. Copy index.php into nginx-container
 `cat /home/thor/index.php`  
 ```console
 <?php
