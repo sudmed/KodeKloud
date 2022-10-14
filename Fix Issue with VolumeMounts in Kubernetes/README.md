@@ -201,7 +201,7 @@ X-Powered-By: PHP/7.2.34
 ```
 
 `https://30008-port-e4c260d781a8426e.labs.kodekloud.com/`
-```table
+```bash
 PHP Version 7.2.34
 System	Linux nginx-phpfpm 5.4.0-1089-gcp #97~18.04.1-Ubuntu SMP Wed Sep 28 03:32:39 UTC 2022 x86_64
 Build Date	Dec 11 2020 10:55:35
