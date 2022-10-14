@@ -155,7 +155,7 @@ Events:  <none>
 ## 2. Get YAML file from kubectl utility
 `kubectl get pod nginx-phpfpm -o yaml  > /tmp/nginx.yaml`  
 
-### 2.1. Do change ‘/usr/share/nginx/html’ to ‘/var/www/html’ in 3 places
+### 2.1. Do change `/usr/share/nginx/html` to `/var/www/html` in 3 places
 
 
 
