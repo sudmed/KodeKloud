@@ -287,24 +287,6 @@ http {
 Events:  <none>
 ```
 
-`kubectl logs nginx-phpfpm nginx-container`  
-```console
-/docker-entrypoint.sh: /docker-entrypoint.d/ is not empty, will attempt to perform configuration
-/docker-entrypoint.sh: Looking for shell scripts in /docker-entrypoint.d/
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/10-listen-on-ipv6-by-default.sh
-10-listen-on-ipv6-by-default.sh: info: Getting the checksum of /etc/nginx/conf.d/default.conf
-10-listen-on-ipv6-by-default.sh: info: Enabled listen on IPv6 in /etc/nginx/conf.d/default.conf
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/20-envsubst-on-templates.sh
-/docker-entrypoint.sh: Launching /docker-entrypoint.d/30-tune-worker-processes.sh
-/docker-entrypoint.sh: Configuration complete; ready for start up
-::1 - - [14/Oct/2022:20:29:55 +0000] "HEAD / HTTP/1.1" 200 0 "-" "curl/7.74.0"
-::1 - - [14/Oct/2022:20:30:44 +0000] "GET / HTTP/1.1" 200 87950 "-" "curl/7.74.0"
-::1 - - [14/Oct/2022:20:31:18 +0000] "GET / HTTP/1.1" 200 87950 "-" "curl/7.74.0"
-10.244.0.1 - - [14/Oct/2022:20:31:41 +0000] "GET / HTTP/1.1" 200 95857 "https://e4c260d781a8426e.labs.kodekloud.com/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
-10.244.0.1 - - [14/Oct/2022:20:31:41 +0000] "GET /robots.txt HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
-10.244.0.1 - - [14/Oct/2022:20:31:41 +0000] "GET /robots.txt HTTP/1.1" 404 555 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.0.0 Safari/537.36"
-```
-
 
 ---
 
