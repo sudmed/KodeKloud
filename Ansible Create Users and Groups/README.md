@@ -68,7 +68,7 @@ host_key_checking = False
 ```
 
 
-## 2. Add vault in the ansible configuration file
+## 2. Add vault into the ansible config
 `vi ansible.cfg`  
 ```console
 [defaults]
