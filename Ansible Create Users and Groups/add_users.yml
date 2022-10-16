@@ -1,0 +1,37 @@
+---
+- name: Add user and groups
+  hosts: stapp01
+  become: yes
+  tasks:
+  - name: Create admins group
+    group:
+      name:
+        admins
+      state: present
+  - name: Create developers group
+    group:
+      name:
+        developers
+      state: present
+  - name: Create users of admins group
+    user:
+      name: "{{ item }}"
+      password: "{{ 'TmPcZjtRQx' | password_hash ('sha512') }}"
+      groups: admins,wheel
+      state: present
+    loop:
+    - rob
+    - david
+    - joy
+  - name: Create users of developers group
+    user:
+      name: "{{ item }}"
+      password: "{{ 'TmPcZjtRQx' | password_hash ('sha512') }}"
+      home: "/var/www/{{ item }}"
+      group: developers
+      state: present
+    loop:
+    - tim
+    - ray
+    - jim
+    - mark
