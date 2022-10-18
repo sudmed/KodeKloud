@@ -24,7 +24,7 @@ stapp02 ansible_host=172.238.16.204 ansible_user=steve
 ```
 
 
-## 2. Fix the inventory
+## 2. Fix the inventory as told in the task
 `vi /home/thor/ansible/inventory`  
 ```console
 stapp01 ansible_host=172.16.238.10 ansible_user=tony ansible_password=Ir0nM@n
