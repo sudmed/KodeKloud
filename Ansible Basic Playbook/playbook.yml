@@ -1,0 +1,10 @@
+---
+- name: Ansible Basic Playbook
+  hosts: stapp01
+  become: yes
+  tasks:
+    - name: Create an empty file
+      file:
+        path: /tmp/file.txt
+        state: touch
+...
