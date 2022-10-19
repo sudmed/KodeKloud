@@ -49,7 +49,7 @@ tomcat-namespace-datacenter   Active   15s
 
 
 ## 3. Create YAML file
-`vi /tmp/tomcat.yaml`  
+`vi /tmp/tomcat.yml`  
 ```yaml
 apiVersion: apps/v1
 kind: Deployment
@@ -92,7 +92,7 @@ spec:
 
 
 ## 4. Run YAML file
-`kubectl create -f /tmp/deploy.yaml`  
+`kubectl apply -f /tmp/tomcat.yml`  
 ```console
 deployment.apps/tomcat-deployment-datacenter created
 service/tomcat-service-datacenter created
