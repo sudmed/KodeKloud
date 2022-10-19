@@ -1,5 +1,5 @@
 # Deploy Tomcat App on Kubernetes
-```
+
 A new java-based application is ready to be deployed on a Kubernetes cluster. The development team had a meeting with the DevOps team to share the requirements and application scope. The team is ready to setup an application stack for it under their existing cluster. 
 Below you can find the details for this:
 - Create a namespace named tomcat-namespace-datacenter.
@@ -9,8 +9,7 @@ Below you can find the details for this:
 - Service type should be NodePort and nodePort should be 32227.
 
 Before clicking on Check button please make sure the application is up and running. You can use any labels as per your choice.  
-Note: The kubectl on jump_host has been configured to work with the kubernetes cluster.
-```
+Note: The kubectl on jump_host has been configured to work with the kubernetes cluster.  
 
 
 ## 1. Reconnaissance on the server
