@@ -172,6 +172,9 @@ and open the template in the editor.
 100   471  100   471    0     0   1618      0 --:--:-- --:--:-- --:--:--  1618
 ```
 
+---
 
-#### CONGRATULATIONS!!!!
+```bash
+CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62a30a135e6ef78f668a6083
+```
