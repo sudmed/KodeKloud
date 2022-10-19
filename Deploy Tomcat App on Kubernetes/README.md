@@ -1,23 +1,20 @@
 # Deploy Tomcat App on Kubernetes
 ```
-A new java-based application is ready to be deployed on a Kubernetes cluster. 
-The development team had a meeting with the DevOps team to share the requirements and application scope. 
-The team is ready to setup an application stack for it under their existing cluster. 
+A new java-based application is ready to be deployed on a Kubernetes cluster. The development team had a meeting with the DevOps team to share the requirements and application scope. The team is ready to setup an application stack for it under their existing cluster. 
 Below you can find the details for this:
-Create a namespace named tomcat-namespace-datacenter.
-Create a deployment for tomcat app which should be named as tomcat-deployment-datacenter under the same namespace you created. 
-Replica count should be 1, the container should be named as tomcat-container-datacenter, its image 
-should be gcr.io/kodekloud/centos-ssh-enabled:tomcat and its container port should be 8080.
-Create a service for tomcat app which should be named as tomcat-service-datacenter under the same namespace you created. 
-Service type should be NodePort and nodePort should be 32227.
-Before clicking on Check button please make sure the application is up and running.
-You can use any labels as per your choice.
+- Create a namespace named tomcat-namespace-datacenter.
+- Create a deployment for tomcat app which should be named as tomcat-deployment-datacenter under the same namespace you created. 
+- Replica count should be 1, the container should be named as tomcat-container-datacenter, its image should be gcr.io/kodekloud/centos-ssh-enabled:tomcat and its container port should be 8080.
+- Create a service for tomcat app which should be named as tomcat-service-datacenter under the same namespace you created.
+- Service type should be NodePort and nodePort should be 32227.
+
+Before clicking on Check button please make sure the application is up and running. You can use any labels as per your choice.  
 Note: The kubectl on jump_host has been configured to work with the kubernetes cluster.
 ```
 
 
-#### # From jump server
-`kubectl get namespace`
+## 1. Reconnaissance on the server
+`kubectl get namespace`  
 ```console
 NAME                 STATUS   AGE
 default              Active   99m
@@ -27,22 +24,19 @@ kube-system          Active   99m
 local-path-storage   Active   99m
 ```
 
-
-`kubectl get pods`
+`kubectl get pods`  
 ```console
 No resources found in default namespace.
 ```
 
 
-#### # Create namespace
-`kubectl create namespace tomcat-namespace-datacenter`
+## 2. Create new namespace
+`kubectl create namespace tomcat-namespace-datacenter`  
 ```console
 namespace/tomcat-namespace-datacenter created
 ```
 
-
-#### # Check new namespace
-`kubectl get namespace`
+`kubectl get namespace`  
 ```console
 NAME                          STATUS   AGE
 default                       Active   100m
@@ -54,9 +48,9 @@ tomcat-namespace-datacenter   Active   15s
 ```
 
 
-#### # Create yaml
-`vi /tmp/tomcat.yaml`
-```console
+## 3. Create YAML file
+`vi /tmp/tomcat.yaml`  
+```yaml
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -79,7 +73,6 @@ spec:
         image: gcr.io/kodekloud/centos-ssh-enabled:tomcat
         ports:
         - containerPort: 8080
-        
 ---        
 apiVersion: v1
 kind: Service
@@ -98,16 +91,16 @@ spec:
 ```
 
 
-#### # Run it
-`kubectl create -f /tmp/deploy.yaml`
+## 4. Run YAML file
+`kubectl create -f /tmp/deploy.yaml`  
 ```console
 deployment.apps/tomcat-deployment-datacenter created
 service/tomcat-service-datacenter created
 ```
 
 
-#### # Check deployments
-`kubectl get pods --all-namespaces`
+## 5. Validate the task
+`kubectl get pods --all-namespaces`  
 ```console
 NAMESPACE                     NAME                                              READY   STATUS    RESTARTS   AGE
 kube-system                   coredns-74ff55c5b-nz56x                           1/1     Running   0          105m
@@ -122,8 +115,7 @@ local-path-storage            local-path-provisioner-78776bfc44-fvccw           
 tomcat-namespace-datacenter   tomcat-deployment-datacenter-97fc9fcd8-p9l8r      1/1     Running   0          88s
 ```
 
-
-`kubectl get svc --all-namespaces`
+`kubectl get svc --all-namespaces`  
 ```console
 NAMESPACE                     NAME                        TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)                  AGE
 default                       kubernetes                  ClusterIP   10.96.0.1       <none>        443/TCP                  105m
@@ -131,8 +123,7 @@ kube-system                   kube-dns                    ClusterIP   10.96.0.10
 tomcat-namespace-datacenter   tomcat-service-datacenter   NodePort    10.96.153.237   <none>        80:32227/TCP             61s
 ```
 
-
-`kubectl get deployments --all-namespaces`
+`kubectl get deployments --all-namespaces`  
 ```console
 NAMESPACE                     NAME                           READY   UP-TO-DATE   AVAILABLE   AGE
 kube-system                   coredns                        2/2     2            2           105m
@@ -140,14 +131,13 @@ local-path-storage            local-path-provisioner         1/1     1          
 tomcat-namespace-datacenter   tomcat-deployment-datacenter   1/1     1            1           77s
 ```
 
-
-`kubectl get pods -n tomcat-namespace-datacenter`
+`kubectl get pods -n tomcat-namespace-datacenter`  
 ```console
 NAME                                           READY   STATUS    RESTARTS   AGE
 tomcat-deployment-datacenter-97fc9fcd8-p9l8r   1/1     Running   0          2m20s
 ```
 
-`kubectl exec tomcat-deployment-datacenter-97fc9fcd8-p9l8r -n tomcat-namespace-datacenter -- curl http://localhost:8080`
+`kubectl exec tomcat-deployment-datacenter-97fc9fcd8-p9l8r -n tomcat-namespace-datacenter -- curl http://localhost:8080`  
 ```console  
   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
                                  Dload  Upload   Total   Spent    Left  Speed
@@ -173,6 +163,7 @@ and open the template in the editor.
 ```
 
 ---
+
 
 ```bash
 CONGRATULATIONS!!!!
