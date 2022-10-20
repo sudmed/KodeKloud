@@ -203,7 +203,7 @@ Hello World Pyvo 1!
 `kubectl exec -it python-deployment-datacenter-5b7b447d4d-skcrp -- curl localhost:5000`  
 ```console
 Hello World Pyvo 1!
-```console
+```
 
 
 ---
