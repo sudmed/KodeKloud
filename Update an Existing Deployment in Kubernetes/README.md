@@ -133,10 +133,8 @@ Events:
 `kubectl edit service nginx-service`  
 ```bash
     30008 -> 32165
-    30008 -> 32165
 service/nginx-service edited
 ```
-
 
 `kubectl get service`  
 ```console
@@ -150,7 +148,6 @@ nginx-service   NodePort    10.96.186.203   <none>        80:32165/TCP   8m32s
 NAME                                READY   STATUS    RESTARTS   AGE
 nginx-deployment-576b8f48fb-wplcr   1/1     Running   0          8m47s
 ```
-
 
 
 ## 3. Edit the deployment
@@ -181,7 +178,6 @@ nginx-deployment-c7ff8fb84-t4bf9   1/1     Running   0          39s
 nginx-deployment-c7ff8fb84-th49g   1/1     Running   0          20s
 nginx-deployment-c7ff8fb84-v95r6   1/1     Running   0          39s
 ```
-
 
 `kubectl describe deploy`  
 ```console
@@ -230,8 +226,7 @@ Events:
 ```
 
 
-
-## 5. Validate the task
+## 4. Validate the task
 https://32165-port-8be30dd260bb4585.labs.kodekloud.com/
 ```html
 Welcome to nginx!
