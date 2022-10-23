@@ -70,6 +70,9 @@ ansible 2.9.9
 
 
 `cat ansible.cfg`  
+<details>
+  <summary>output</summary>
+  
 ```console
 # config file for ansible -- https://ansible.com/
 # ===============================================
@@ -552,6 +555,7 @@ ansible 2.9.9
 # Set how many context lines to show in diff
 # context = 3
 ```
+</details>
 
 
 ## 2. Change default ssh user
