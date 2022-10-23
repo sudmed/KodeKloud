@@ -81,7 +81,7 @@ drwxr-xr-x 2 thor thor 4096 Oct 23 19:09 roles
 <details>
   <summary>output</summary>
   
-```console
+```bash
 # config file for ansible -- https://ansible.com/
 # ===============================================
 
