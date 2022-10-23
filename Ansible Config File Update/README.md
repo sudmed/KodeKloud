@@ -17,6 +17,13 @@ ansible 2.9.9
   python version = 2.7.5 (default, Jun 20 2019, 20:27:34) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
 ```
 
+`ls -1 /etc/ansible/`  
+```console
+hosts
+ansible.cfg
+roles\
+```
+
 `cat hosts`  
 <details>
   <summary>output</summary>
