@@ -20,6 +20,7 @@ ansible 2.9.9
 `cat hosts`  
 <details>
   <summary>output</summary>
+  
   ```console
   # This is the default ansible 'hosts' file.
   #
