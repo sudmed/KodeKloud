@@ -19,7 +19,7 @@ ansible 2.9.9
 
 `cat hosts`  
 <details>
-  <summary>`cat hosts`</summary>
+  <summary>cat hosts</summary>
 # This is the default ansible 'hosts' file.
 #
 # It should live in /etc/ansible/hosts
