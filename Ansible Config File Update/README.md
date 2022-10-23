@@ -18,6 +18,8 @@ ansible 2.9.9
 ```
 
 `cat hosts`  
+<details>
+  <summary>This is the default ansible 'hosts' file.</summary>
 ```console
 # This is the default ansible 'hosts' file.
 #
@@ -62,7 +64,9 @@ ansible 2.9.9
 # leading 0s:
 
 ## db-[99:101]-node.example.com
-```
+```  
+</details>
+
 
 `cat ansible.cfg`  
 ```console
@@ -76,7 +80,6 @@ ansible 2.9.9
 # finds first
 
 [defaults]
-
 # some basic default values...
 
 #inventory      = /etc/ansible/hosts
