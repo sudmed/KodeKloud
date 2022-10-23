@@ -19,7 +19,8 @@ ansible 2.9.9
 
 `cat hosts`  
 <details>
-  <summary>This is the default ansible 'hosts' file.</summary>
+  <summary>`cat hosts`  </summary>
+```ansible
 # This is the default ansible 'hosts' file.
 #
 # It should live in /etc/ansible/hosts
@@ -63,6 +64,7 @@ ansible 2.9.9
 # leading 0s:
 
 ## db-[99:101]-node.example.com
+```
 </details>
 
 
