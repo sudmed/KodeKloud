@@ -29,7 +29,7 @@ drwxr-xr-x 2 thor thor 4096 Oct 23 19:09 roles
 <details>
   <summary>output</summary>
   
-  ```ansible
+  ```bash
 # This is the default ansible 'hosts' file.
 #
 # It should live in /etc/ansible/hosts
