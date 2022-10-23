@@ -1,7 +1,7 @@
 # Ansible Config File Update
 
 To manage all servers within the stack using Ansible, the Nautilus DevOps team is planning to use a common sudo user among all servers. Ansible will be able to use this to perform different tasks on each server. This is not finalized yet, but the team has decided to first perform testing. The DevOps team has already installed Ansible on jump host using yum, and they now have the following requirement:  
-On jump host make appropriate changes so that Ansible can use mark as a default ssh user for all hosts. Make changes in Ansible's default configuration only —please do not try to create a new config.
+- On jump host make appropriate changes so that Ansible can use mark as a default ssh user for all hosts. Make changes in Ansible's default configuration only —please do not try to create a new config.
 
 
 ## 1. Reconnaissance on the server
@@ -15,9 +15,9 @@ ansible 2.9.9
   ansible python module location = /usr/lib/python2.7/site-packages/ansible
   executable location = /bin/ansible
   python version = 2.7.5 (default, Jun 20 2019, 20:27:34) [GCC 4.8.5 20150623 (Red Hat 4.8.5-36)]
-```
+`
 
-`cat hosts```  
+`cat hosts`  
 ```console
 # This is the default ansible 'hosts' file.
 #
@@ -64,7 +64,7 @@ ansible 2.9.9
 ## db-[99:101]-node.example.com
 ```
 
-`cat ansible.cfg```  
+`cat ansible.cfg`  
 ```console
 # config file for ansible -- https://ansible.com/
 # ===============================================
