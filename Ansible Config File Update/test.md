@@ -1,5 +1,6 @@
-#### hidden field with metadata 👇
-
-<div class="meta_for_parser tablespecs" style="visibility:hidden">{"dataname":"environment","colvar":"varname","colval":"value"}</div>
-
-#### hidden field with metadata 👆
+<
+details
+>
+  <summary>Q1: What is the best Language in the World? </summary>
+   A1: JavaScript
+</details>
