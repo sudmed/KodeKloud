@@ -19,9 +19,10 @@ ansible 2.9.9
 
 `ls -1 /etc/ansible/`  
 ```console
-hosts
-ansible.cfg
-roles\
+total 16
+-rw-r--r-- 1 thor thor   36 Oct 16 17:01 ansible.cfg
+-rw-r--r-- 1 thor thor  237 Oct 16 17:01 hosts
+drwxr-xr-x 2 thor thor 4096 Oct 16 17:01 roles
 ```
 
 `cat hosts`  
