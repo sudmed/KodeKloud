@@ -81,7 +81,7 @@ default-token-kcdt9   kubernetes.io/service-account-token   3      4h4m
 ```
 
 
-## 2. Create the namespace
+## 2. Create namespace
 `kubectl create namespace httpd-namespace-xfusion`  
 ```console
 namespace/httpd-namespace-xfusion created
@@ -99,7 +99,7 @@ local-path-storage        Active   4h5m
 ```
 
 
-## 3. Create the YAML file
+## 3. Create YAML file
 `vi /tmp/http.yaml`  
 ```yaml
 apiVersion: v1
@@ -142,7 +142,7 @@ spec:
 ```
 
 
-## 4. Run the YAML file
+## 4. Run YAML file
 `kubectl apply -f /tmp/http.yaml`  
 ```console
 service/httpd-service-xfusion created
