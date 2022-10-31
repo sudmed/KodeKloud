@@ -73,8 +73,8 @@ You have successfully completed the quiz. Results have been saved. Ref ID:631520
 ```
 
 ---
+
+```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:635b8d05541041a80e0dca90
-```bash
-
 ```
