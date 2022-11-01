@@ -44,7 +44,9 @@ host_key_checking = False
 ```yaml
 stapp02 ansible_host=172.16.238.11 ansible_ssh_pass=Am3ric@  ansible_user=steve
 ```
-
+```yaml
+stapp01 ansible_host=172.16.238.10 ansible_ssh_pass=Ir0nM@n  ansible_user=tony
+```
 
 ## 3. Run the playbook
 `ansible-playbook  -i inventory playbook.yml`  
@@ -77,4 +79,11 @@ You have successfully completed the quiz. Results have been saved. Ref ID:631520
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:635b8d05541041a80e0dca90
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:6360d2e8d6186f1e7b426e9a
 ```
