@@ -44,9 +44,9 @@ host_key_checking = False
 ```yaml
 stapp02 ansible_host=172.16.238.11 ansible_ssh_pass=Am3ric@  ansible_user=steve
 ```
-```bash
-or
-```
+
+`or`
+
 ```yaml
 stapp01 ansible_host=172.16.238.10 ansible_ssh_pass=Ir0nM@n  ansible_user=tony
 ```
