@@ -159,7 +159,8 @@ nginx-deployment   1/1     1            1           10m
 
 `kubectl edit deploy nginx-deployment`  
 ```console
-    nginx:1.17 -> nginx:latest
+    replicas: 1 -> replicas: 5
+    nginx:1.17  -> nginx:latest
 deployment.apps/nginx-deployment edited
 ```
 
@@ -257,3 +258,7 @@ You have successfully completed the quiz. Results have been saved. Ref ID:635252
 
 ---
 
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:63625cab8a4ac6a7126e5de5
+```
