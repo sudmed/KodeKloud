@@ -7,7 +7,7 @@ Make sure all pods are up and running after the update.
 Note: The kubectl utility on jump_host has been configured to work with the kubernetes cluster.
 
 
-## 1. check existing deployment and pods
+## 1. Check existing deployment and pods
 `kubectl get deploy`
 ```console
 NAME               READY   UP-TO-DATE   AVAILABLE   AGE
@@ -23,7 +23,7 @@ nginx-deployment-74fb588559-xf2bb   1/1     Running   0          32s
 ```
 
 
-## 2. set container image
+## 2. Set container image
 `kubectl describe deployment nginx-deployment`
 ```console
 Name:                   nginx-deployment
@@ -66,7 +66,7 @@ deployment.apps/nginx-deployment image updated
 ```
 
 
-## 3. wait for  deployment and pods run
+## 3. Ckeck for deployment and pods are running again
 `kubectl get pods`
 ```console
 NAME                                READY   STATUS              RESTARTS   AGE
@@ -125,7 +125,7 @@ nginx-deployment   3/3     3            3           105s
 ```
 
 
-## 4. check the rollout deployment status
+## 4. Сheck the rollout deployment status
 `kubectl rollout status deployment nginx-deployment`
 ```console
 deployment "nginx-deployment" successfully rolled out
@@ -143,4 +143,11 @@ nginx-deployment-57bf6d6978-gqwhj   1/1     Running   0          64s
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62bb0a7c78bcb637027f8887
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:6363bc125cb4b15def8680ce
 ```
