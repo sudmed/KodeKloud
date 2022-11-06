@@ -6,7 +6,8 @@ As per details shared with DevOps team, we need to accomplish the following task
 
 
 ## 1. Login on to app server
-`ssh banner@stapp03`  
+`ssh banner@stapp03
+`ssh tony@stapp01`  
 `sudo -i`
 
 ## 2. Check existing docker images
@@ -41,4 +42,11 @@ busybox      musl      368ac696baa1   2 weeks ago   1.4MB
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62b6f999c8f39ab094d26385
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:636545fedba7fe621cbc5673
 ```
