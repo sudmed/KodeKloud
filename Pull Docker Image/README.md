@@ -7,8 +7,8 @@ As per details shared with DevOps team, we need to accomplish the following task
 
 ## 1. Login on to app server
 ```
-ssh banner@stapp03
-ssh tony@stapp01
+ssh banner@stapp03  # BigGr33n
+ssh tony@stapp01    # Ir0nM@n
 ```
 `sudo -i`
 
