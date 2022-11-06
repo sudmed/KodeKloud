@@ -6,8 +6,10 @@ As per details shared with DevOps team, we need to accomplish the following task
 
 
 ## 1. Login on to app server
-`ssh banner@stapp03
-`ssh tony@stapp01`  
+```
+ssh banner@stapp03
+ssh tony@stapp01
+```
 `sudo -i`
 
 ## 2. Check existing docker images
