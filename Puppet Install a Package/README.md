@@ -16,7 +16,7 @@ also please make sure to run puppet agent test to apply/test the changes manuall
 
 ## 1. create puppet file
 `cd /etc/puppetlabs/code/environments/production/manifests/`  
-`vi games.pp`
+`sudo vi games.pp`
 
 ```yaml
 class apache_installer {
@@ -34,12 +34,9 @@ node 'stapp03.stratos.xfusioncorp.com' {
 `puppet parser validate games.pp`
 
 
-## 3. Login on App server stapp03
+## 3. Login on App server stapp03 and run Puppet agent
 `ssh banner@stapp03`  
 `sudo -i`
-
-
-## 4. Run Puppet agent
 `puppet agent -tv`
 
 ```console
@@ -54,7 +51,7 @@ Notice: Applied catalog in 22.19 seconds
 ```
 
 
-## 5. Validate the task
+## 4. Validate the task
 `rpm -qa | grep httpd`
 
 ```console
@@ -63,7 +60,18 @@ httpd-tools-2.4.6-97.el7.centos.5.x86_64
 ```
 
 
-```console
+---
+
+
+
+```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:62b2f73f668fa542fb69f91c
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:637bd9c6d47732a566434ec4
 ```
