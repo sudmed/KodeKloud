@@ -72,7 +72,7 @@ Content-Type: text/html
 ---
 
 ## A job well-done congratulations:
-
+### Experience cost: 400
 
 ```bash
 CONGRATULATIONS!!!!
