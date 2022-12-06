@@ -147,8 +147,18 @@ Events:
 
 
 ---
+## A job well-done congratulations:
+### Experience cost: 500
+
 
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:6321ed3f00d6ef2dcfd99474
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:638f75df5da940a495c310e7
 ```
