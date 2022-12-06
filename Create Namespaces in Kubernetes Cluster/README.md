@@ -150,6 +150,7 @@ Events:
 ## A job well-done congratulations:
 ### Experience cost: 500
 
+---
 
 ```bash
 CONGRATULATIONS!!!!
