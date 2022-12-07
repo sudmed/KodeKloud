@@ -7,9 +7,9 @@ Please give executable permissions to /tmp/xfusioncorp.sh script on App Server 3
 
 `chmod o+rx /tmp/xfusioncorp.sh`  
 
-
+---
 
 ```text
-NB! Execution of a binary file needs read permission. Only root can exec file without read permission, but you were asked 'make sure EVERY user can'.  
+NB! Execution of a binary file needs read permission. Only root can exec file without read permission, but it was asked 'make sure EVERY user can'.  
 chmod ugo+rx <file>
 ```
