@@ -172,7 +172,19 @@ Commercial support is available at
 
 ---
 
+## A job well-done congratulations:
+### Experience cost: 800
+
+---
+
 ```bash
 CONGRATULATIONS!!!!
 You have successfully completed the quiz. Results have been saved. Ref ID:633c6785b020001fa820ae42
+```
+
+---
+
+```bash
+CONGRATULATIONS!!!!
+You have successfully completed the quiz. Results have been saved. Ref ID:6390e3768e20cabd4f3b8fed
 ```
