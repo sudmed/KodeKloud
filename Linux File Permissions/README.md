@@ -14,4 +14,5 @@ Execution of a binary file needs read permission. Only root can exec file withou
 ```bash
 chmod ugo+rx <file>
 ```
+
 ```
