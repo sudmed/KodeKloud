@@ -14,3 +14,7 @@ sshpass -p 'Gr00T123' ssh groot@stmail01
 sshpass -p 'mjolnir123' ssh thor@jump_host
 sshpass -p 'j@rv!s' ssh jenkins@jenkins
 ```
+
+---
+
+![1st.png](1st.png)
